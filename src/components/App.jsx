@@ -1,16 +1,19 @@
-export const App = () => {
+import { Route, Routes, Navigate } from 'react-router-dom';
+import WelcomePage from '../pages/WelcomePage/WelcomePage';
+
+const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React template
-    </div>
+    <Routes>
+      <Route path="/" element={<WelcomePage />} />
+      {/* <Route path="/catalog" element={<Catalog />} />
+      <Route path="/favorites" element={<Favorites />} /> */}
+      <Route path="*" element={<Navigate to="/" />} />
+    </Routes>
   );
 };
+
+
+export default App;
+
+
+
