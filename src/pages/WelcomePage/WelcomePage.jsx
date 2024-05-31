@@ -1,6 +1,6 @@
 import React from 'react';
 import * as Styled from './WelcomePage.styled.jsx';
-import FooterPage from 'components/Footer/FooterPage.jsx';
+import FooterPage from 'components/FooterPage/FooterPage.jsx';
 import HomePage from 'components/HomePage/HomePage.jsx';
 
 const WelcomePage = () => {
