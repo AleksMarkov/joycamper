@@ -1,13 +1,14 @@
 {
   "files": {
     "main.css": "/joycamper/static/css/main.7acaea2f.css",
-    "main.js": "/joycamper/static/js/main.1c37b54a.js",
+    "main.js": "/joycamper/static/js/main.41c61385.js",
+    "static/media/camping.jpg": "/joycamper/static/media/camping.1b8ba1e849ce89078fad.jpg",
     "index.html": "/joycamper/index.html",
     "main.7acaea2f.css.map": "/joycamper/static/css/main.7acaea2f.css.map",
-    "main.1c37b54a.js.map": "/joycamper/static/js/main.1c37b54a.js.map"
+    "main.41c61385.js.map": "/joycamper/static/js/main.41c61385.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.1c37b54a.js"
+    "static/js/main.41c61385.js"
   ]
 }
