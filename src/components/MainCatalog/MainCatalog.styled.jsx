@@ -88,7 +88,6 @@ export const FilterButton = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
-    // mix-blend-mode: multiply;
     &:hover {
         background-color: #f0f0f0;
     }
@@ -100,15 +99,15 @@ export const Button = styled.button`
     align-items: center;
     padding: 16px 60px;
     gap: 10px;
-    width: 173px; /* Width adjusted for the Search button */
-    height: 56px; /* Height adjusted for the Search button */
+    width: 173px; 
+    height: 56px; 
     background: #e44848;
     border-radius: 200px;
     color: white;
     border: none;
     cursor: pointer;
     font-size: 16px;
-    align-self: center; /* Center the button horizontally */
+    align-self: center; 
     margin-top: 20px;
     &:hover {
         background: #d33d3d;
