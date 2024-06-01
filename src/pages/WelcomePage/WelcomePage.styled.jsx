@@ -13,7 +13,8 @@ export const ButtonContainer = styled.div`
     display: flex;
     justify-content: center;
     gap: 300px;
-    margin: 40px 0;
+    background-color: #fffacd; 
+    padding: 40px;
 `;
 
 export const Button = styled.button`
