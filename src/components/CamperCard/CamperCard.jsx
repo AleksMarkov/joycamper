@@ -16,7 +16,7 @@ const CamperCard = ({ card }) => {
 
 
     // console.log(card)
-    const formattedPrice = `€${parseFloat(card.price).toFixed(2)}`;
+    const formattedPrice = `€${parseFloat(card.price).toFixed(2).replace('.', ',')}`;
 
   return (
     <Styled.Card>

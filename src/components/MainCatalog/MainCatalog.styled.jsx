@@ -42,11 +42,14 @@ export const Input = styled.input`
   font-size: 16px;
   background-color: #f7f7f7;
   color: rgba(16, 24, 40, 0.6);
+  background: url(${({ icon }) => icon}) no-repeat 16px center / 24px 24px, #f7f7f7;
+  padding-left: 50px; /* Adjust padding to account for the icon */
   &:hover {
     color: #101828;
     outline: none;
   }
 `;
+
 
 export const FiltersTitle = styled.div`
   font-family: "Inter", sans-serif;
@@ -96,14 +99,14 @@ export const Filters = styled.div`
 `;
 
 export const FilterButton = styled.button`
-  border: 1px solid rgba(16, 24, 40, 0.2);
+  border: 1px solid ${({ isSelected }) => (isSelected ? '#e44848' : 'rgba(16, 24, 40, 0.2)')};
   border-radius: 10px;
   padding: 17px 27px;
   width: 114px;
   height: 95px;
   font-size: 16px;
   cursor: pointer;
-  background-color: #fff;
+  background-color: ${({ isSelected }) => (isSelected ? '#fdecec' : '#fff')};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -120,13 +123,13 @@ export const IconWrapper = styled.div`
 `;
 
 export const ButtonText = styled.div`
-font-family: "Inter", sans-serif;
-font-weight: 500;
-font-size: 16px;
-line-height: 1.25;
-text-align: center;
-color: #101828;
-margin-top: 8px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  color: #101828;
+  margin-top: 8px;
 `;
 
 export const Button = styled.button`
@@ -148,3 +151,4 @@ export const Button = styled.button`
     background-color: #d84343;
   }
 `;
+
