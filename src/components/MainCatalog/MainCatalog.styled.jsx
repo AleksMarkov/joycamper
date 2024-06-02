@@ -43,7 +43,7 @@ export const Input = styled.input`
   background-color: #f7f7f7;
   color: rgba(16, 24, 40, 0.6);
   background: url(${({ icon }) => icon}) no-repeat 16px center / 24px 24px, #f7f7f7;
-  padding-left: 50px; /* Adjust padding to account for the icon */
+  padding-left: 50px; 
   &:hover {
     color: #101828;
     outline: none;
@@ -106,13 +106,14 @@ export const FilterButton = styled.button`
   height: 95px;
   font-size: 16px;
   cursor: pointer;
-  background-color: ${({ isSelected }) => (isSelected ? '#fdecec' : '#fff')};
+  background-color: #fff;
+  // background-color: ${({ isSelected }) => (isSelected ? '#fdecec' : '#fff')};
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   &:hover {
-    background-color: #f0f0f0;
+    background-color: #fdecec;
   }
 `;
 
@@ -134,13 +135,13 @@ export const ButtonText = styled.div`
 
 export const Button = styled.button`
   display: flex;
-  justify-content: flex-start; /* Aligns the button to the start */
+  justify-content: flex-start; 
   align-items: center;
   padding: 16px 60px;
   gap: 10px;
   width: 173px;
   height: 56px;
-  background: #e44848;
+  background-color: #e44848;
   border-radius: 200px;
   color: white;
   border: none;

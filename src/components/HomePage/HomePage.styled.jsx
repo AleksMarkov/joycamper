@@ -42,6 +42,6 @@ export const Heading = styled.h1`
 export const Text = styled.p`
     text-align: justify;
     text-justify: inter-word;
-    width: 100%; /* Ensure the text takes full width of the container */
+    width: 100%; 
     margin: 0;
 `;

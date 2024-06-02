@@ -11,23 +11,26 @@ import { ReactComponent as Alcove } from '../../images/MYSVG/Alcove.svg';
 import Map from '../../images/MYSVG/Map.svg';
 
 const MainCatalog = () => {
-  const [selectedVehicle, setSelectedVehicle] = useState('All');
   const [acSelected, setAcSelected] = useState(false);
   const [automaticSelected, setAutomaticSelected] = useState(false);
   const [kitchenSelected, setKitchenSelected] = useState(false);
   const [tvSelected, setTvSelected] = useState(false);
   const [showerSelected, setShowerSelected] = useState(false);
+  const [location, setLocation] = useState(''); 
+  const [vanSelected, setVanSelected] = useState(false);
+  const [fullSelected, setFullSelected] = useState(false);
+  const [alcoveSelected, setAlcoveSelected] = useState(false);
 
-  const handleVehicleSelect = (vehicleType) => {
-    if (selectedVehicle === vehicleType) {
-      setSelectedVehicle('All');
-    } else {
-      setSelectedVehicle(vehicleType);
-    }
+  const handleVehicleSelect = (vehicleType, setVechicleType) => {
+    setVechicleType((prevState) => !prevState);
   };
 
   const handleEquipmentSelect = (equipmentType, setEquipmentType) => {
     setEquipmentType((prevState) => !prevState);
+  };
+
+  const handleLocationChange = (event) => {
+    setLocation(event.target.value); 
   };
 
   return (
@@ -35,7 +38,13 @@ const MainCatalog = () => {
       <Styled.LocationSection>
         <Styled.SupportingText>Location</Styled.SupportingText>
         <Styled.InputForm>
-          <Styled.Input type="text" placeholder="Kyiv, Ukraine" icon={Map} />
+          <Styled.Input
+            type="text"
+            placeholder="Kyiv, Ukraine"
+            icon={Map}
+            value={location} 
+            onChange={handleLocationChange} 
+          />
         </Styled.InputForm>
       </Styled.LocationSection>
       <Styled.FiltersTitle>Filters</Styled.FiltersTitle>
@@ -96,8 +105,8 @@ const MainCatalog = () => {
           <Styled.Divider />
           <Styled.Filters>
             <Styled.FilterButton
-              isSelected={selectedVehicle === 'Van'}
-              onClick={() => handleVehicleSelect('Van')}
+              isSelected={vanSelected}
+              onClick={() => handleVehicleSelect('panelTruck', setVanSelected)}
             >
               <Styled.IconWrapper>
                 <Van width="40" height="28" />
@@ -105,8 +114,8 @@ const MainCatalog = () => {
               <Styled.ButtonText>Van</Styled.ButtonText>
             </Styled.FilterButton>
             <Styled.FilterButton
-              isSelected={selectedVehicle === 'Fully Integrated'}
-              onClick={() => handleVehicleSelect('Fully Integrated')}
+              isSelected={fullSelected}
+              onClick={() => handleVehicleSelect('fullyIntegrated',setFullSelected )}
             >
               <Styled.IconWrapper>
                 <Fully width="40" height="28" />
@@ -114,8 +123,8 @@ const MainCatalog = () => {
               <Styled.ButtonText>Fully Integrated</Styled.ButtonText>
             </Styled.FilterButton>
             <Styled.FilterButton
-              isSelected={selectedVehicle === 'Alcove'}
-              onClick={() => handleVehicleSelect('Alcove')}
+              isSelected={alcoveSelected}
+              onClick={() => handleVehicleSelect('alcove',setAlcoveSelected)}
             >
               <Styled.IconWrapper>
                 <Alcove width="40" height="28" />
