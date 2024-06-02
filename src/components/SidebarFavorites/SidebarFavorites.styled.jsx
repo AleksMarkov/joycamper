@@ -16,14 +16,14 @@ export const EmptyMessage = styled.div`
   font-size: 24px;
   line-height: 1.5;
   color: #101828;
-  text-align: center; /* Center the text */
+  text-align: center; 
   margin-top: 20px;
 `;
 
 export const Highlight = styled.span`
-  font-weight: 700; /* Bold text */
-  text-decoration: underline; /* Underline text */
-  color: #ff4500; /* Highlight color */
+  font-weight: 700; 
+  text-decoration: underline; 
+  color: #ff4500;
 `;
 
 export const LoadMoreButton = styled.button`
@@ -40,8 +40,8 @@ export const LoadMoreButton = styled.button`
   background-color: white;
   cursor: pointer;
   margin-top: 20px;
-  position: relative; // Position relative for offset adjustment
-  left: 370px; // Offset the button 100px to the right
+  margin-bottom: 100px;
+  position: relative; 
 
   &:hover {
     border: 1px solid #e44848;

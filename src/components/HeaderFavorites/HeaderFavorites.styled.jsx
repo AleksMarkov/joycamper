@@ -6,28 +6,31 @@ export const TopBar = styled.div`
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
-  margin-left: 36px;
+  background-color: #e44848;
+  margin-bottom: 8px
 `;
 
 export const ButtonContainer = styled.div`
   display: flex;
   justify-content: flex-start;
-  gap: 48px;
-  padding: 28px;
+  padding-left: 146px;
 `;
 
 export const Button = styled.button`
-padding: 10px 20px;
+border-left: 2px solid white;
+border-right: 2px solid white;
+border-top: none;
+border-bottom: none;
+padding: 20px 50px;
 background-color: #e44848;
 color: white;
-border: none;
-border-radius: 10px;
 cursor: pointer;
-font-size: 20px;
+font-size: 24px;
 font-weight: 700;
 transition: background-color 0.3s ease;
 
 &:hover {
-  background-color: #d84343;
+  color: #e44848;
+  background-color: white;
 }
 `;

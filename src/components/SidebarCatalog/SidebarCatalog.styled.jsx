@@ -23,8 +23,9 @@ export const LoadMoreButton = styled.button`
   background-color: white;
   cursor: pointer;
   margin-top: 20px;
-  position: relative; // Position relative for offset adjustment
-  left: 370px; // Offset the button 100px to the right
+  margin-bottom: 100px;
+  position: relative; 
+  left: 370px; 
 
   &:hover {
     border: 1px solid #e44848;
