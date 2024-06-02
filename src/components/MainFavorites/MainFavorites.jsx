@@ -19,9 +19,7 @@ const MainFavorites = () => {
           <Styled.Input type="text" placeholder="Kyiv, Ukraine" />
         </Styled.InputForm>
       </Styled.LocationSection>
-
       <Styled.FiltersTitle>Filters</Styled.FiltersTitle>
-     
       <Styled.FiltersSection>
         <Styled.ContainerVehicle>
           <Styled.FilterTitle>Vehicle equipment</Styled.FilterTitle>
@@ -60,7 +58,7 @@ const MainFavorites = () => {
             </Styled.Filters>
            </Styled.ContainerVehicle>
         <Styled.ContainerVehicle>
-          <Styled.FilterTitle>Vehicle type</Styled.FilterTitle>Shower/WC
+          <Styled.FilterTitle>Vehicle type</Styled.FilterTitle>
           <Styled.Divider />
           <Styled.Filters>
             <Styled.FilterButton>
@@ -82,9 +80,8 @@ const MainFavorites = () => {
               <Styled.ButtonText>Alcove</Styled.ButtonText>
             </Styled.FilterButton>
           </Styled.Filters>
-        </Styled.ContainerVehicle>Alcove
+        </Styled.ContainerVehicle>
       </Styled.FiltersSection>
-      
       <Styled.Button>Search</Styled.Button>
     </Styled.Container>
   );

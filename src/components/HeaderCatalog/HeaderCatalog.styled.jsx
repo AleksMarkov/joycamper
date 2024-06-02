@@ -12,7 +12,7 @@ export const TopBar = styled.div`
 export const ButtonContainer = styled.div`
   display: flex;
   justify-content: flex-start;
-  gap: 64px;
+  gap: 48px;
   padding: 28px;
 `;
 

@@ -10,7 +10,7 @@ const HeaderCatalog = () => {
         <Styled.Button>Home</Styled.Button>
       </Link>
       <Link to="/favorites">
-        <Styled.Button>My Favorite Campers</Styled.Button>
+        <Styled.Button>Favorite Campers</Styled.Button>
       </Link>
       </Styled.ButtonContainer>
     </Styled.TopBar>
