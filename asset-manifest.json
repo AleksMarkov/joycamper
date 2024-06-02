@@ -1,22 +1,27 @@
 {
   "files": {
     "main.css": "/joycamper/static/css/main.7acaea2f.css",
-    "main.js": "/joycamper/static/js/main.4ca8b6f2.js",
+    "main.js": "/joycamper/static/js/main.f557da1b.js",
     "static/media/camping.jpg": "/joycamper/static/media/camping.1b8ba1e849ce89078fad.jpg",
     "static/media/AC.svg": "/joycamper/static/media/AC.e958509129baf1cbc457d03d571594e6.svg",
     "static/media/Alcove.svg": "/joycamper/static/media/Alcove.c88eac51ddce701735a9d59ac487eaf7.svg",
     "static/media/Van.svg": "/joycamper/static/media/Van.0e4e5175d46d2dd924033e611a60839a.svg",
     "static/media/Fully.svg": "/joycamper/static/media/Fully.ba2e206ff929e672c739401c1cbd43cd.svg",
     "static/media/transmission.svg": "/joycamper/static/media/transmission.302635f96bd7f32b154fc7ed7f45ba3f.svg",
+    "static/media/users.svg": "/joycamper/static/media/users.72c7a0add9759233c951c51a8c6fac51.svg",
     "index.html": "/joycamper/index.html",
+    "static/media/star.svg": "/joycamper/static/media/star.feeb7a154b9aca3fbe72315a0b5aaa2f.svg",
+    "static/media/beds.svg": "/joycamper/static/media/beds.72f21609b5a37c90350c0d90dc8f0973.svg",
     "static/media/TV.svg": "/joycamper/static/media/TV.f0520bf3f91bdbf212fcd30d65725d9a.svg",
     "static/media/kitchen.svg": "/joycamper/static/media/kitchen.ff2d9db2667fab36d80463a41842df55.svg",
+    "static/media/engine.svg": "/joycamper/static/media/engine.b740046e278da150a435f31955d9f960.svg",
+    "static/media/Map.svg": "/joycamper/static/media/Map.5622ede108b960a5619a4280ef97ecf4.svg",
     "static/media/shower.svg": "/joycamper/static/media/shower.1b34cb6fae7106a305740b6f0fbde0ea.svg",
     "main.7acaea2f.css.map": "/joycamper/static/css/main.7acaea2f.css.map",
-    "main.4ca8b6f2.js.map": "/joycamper/static/js/main.4ca8b6f2.js.map"
+    "main.f557da1b.js.map": "/joycamper/static/js/main.f557da1b.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.4ca8b6f2.js"
+    "static/js/main.f557da1b.js"
   ]
 }
