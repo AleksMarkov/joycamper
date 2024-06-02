@@ -1,14 +1,22 @@
 {
   "files": {
     "main.css": "/joycamper/static/css/main.7acaea2f.css",
-    "main.js": "/joycamper/static/js/main.2b7f5c21.js",
+    "main.js": "/joycamper/static/js/main.4ca8b6f2.js",
     "static/media/camping.jpg": "/joycamper/static/media/camping.1b8ba1e849ce89078fad.jpg",
+    "static/media/AC.svg": "/joycamper/static/media/AC.e958509129baf1cbc457d03d571594e6.svg",
+    "static/media/Alcove.svg": "/joycamper/static/media/Alcove.c88eac51ddce701735a9d59ac487eaf7.svg",
+    "static/media/Van.svg": "/joycamper/static/media/Van.0e4e5175d46d2dd924033e611a60839a.svg",
+    "static/media/Fully.svg": "/joycamper/static/media/Fully.ba2e206ff929e672c739401c1cbd43cd.svg",
+    "static/media/transmission.svg": "/joycamper/static/media/transmission.302635f96bd7f32b154fc7ed7f45ba3f.svg",
     "index.html": "/joycamper/index.html",
+    "static/media/TV.svg": "/joycamper/static/media/TV.f0520bf3f91bdbf212fcd30d65725d9a.svg",
+    "static/media/kitchen.svg": "/joycamper/static/media/kitchen.ff2d9db2667fab36d80463a41842df55.svg",
+    "static/media/shower.svg": "/joycamper/static/media/shower.1b34cb6fae7106a305740b6f0fbde0ea.svg",
     "main.7acaea2f.css.map": "/joycamper/static/css/main.7acaea2f.css.map",
-    "main.2b7f5c21.js.map": "/joycamper/static/js/main.2b7f5c21.js.map"
+    "main.4ca8b6f2.js.map": "/joycamper/static/js/main.4ca8b6f2.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.2b7f5c21.js"
+    "static/js/main.4ca8b6f2.js"
   ]
 }
