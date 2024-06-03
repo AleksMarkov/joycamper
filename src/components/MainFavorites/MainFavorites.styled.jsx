@@ -107,7 +107,6 @@ export const FilterButton = styled.button`
   font-size: 16px;
   cursor: pointer;
   background-color: #fff;
-  // background-color: ${({ isselected }) => (isselected ? '#fdecec' : '#fff')};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -135,7 +134,7 @@ export const ButtonText = styled.div`
 
 export const Button = styled.button`
   display: flex;
-  justify-content: flex-start; /* Aligns the button to the start */
+  justify-content: flex-start; 
   align-items: center;
   padding: 16px 60px;
   gap: 10px;

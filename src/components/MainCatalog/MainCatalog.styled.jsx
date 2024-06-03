@@ -41,12 +41,12 @@ export const Input = styled.input`
   height: 56px;
   font-size: 16px;
   background-color: #f7f7f7;
-  color: #101828; /* Ensure the text color remains #101828 */
+  color: #101828; 
   background: url(${({ icon }) => icon}) no-repeat 16px center / 24px 24px, #f7f7f7;
   padding-left: 50px;
   &:hover,
   &:focus {
-    color: #101828; /* Ensure the text color remains #101828 on hover and focus */
+    color: #101828;
     outline: none;
   }
 `;
@@ -109,7 +109,6 @@ export const FilterButton = styled.button`
   font-size: 16px;
   cursor: pointer;
   background-color: #fff;
-  // background-color: ${({ isselected }) => (isselected ? '#fdecec' : '#fff')};
   display: flex;
   flex-direction: column;
   justify-content: center;
