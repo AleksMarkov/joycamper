@@ -26,11 +26,11 @@ const CatalogPage = () => {
     const filtered = cards.filter(card => {
 
       return (
-        (!filters.acSelected || card.details.airConditioner > 0) &&
+        (!filters.acSelected || card.details.airConditioner === 1) &&
         (!filters.automaticSelected || card.transmission.toLowerCase() === 'automatic') &&
-        (!filters.kitchenSelected || card.details.kitchen > 0) &&
+        (!filters.kitchenSelected || card.details.kitchen === 1) &&
         (!filters.tvSelected || card.details.TV === 1) &&
-        (!filters.showerSelected || card.details.shower > 0) &&
+        (!filters.showerSelected || card.details.shower === 1) &&
         (!filters.location || card.location.toLowerCase().includes(filters.location.toLowerCase())) &&
         (filters.selectedForms.length === 0 || filters.selectedForms.includes(card.form))
       );

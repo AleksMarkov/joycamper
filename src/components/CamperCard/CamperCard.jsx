@@ -10,6 +10,8 @@ import Engine from '../../images/MYSVG/engine.svg';
 import Kitchen from '../../images/MYSVG/kitchen.svg';
 import Beds from '../../images/MYSVG/beds.svg';
 import AC from '../../images/MYSVG/AC.svg';
+import TV from '../../images/MYSVG/TV.svg';
+import WC from '../../images/MYSVG/shower.svg';
 import HartOff from '../../images/MYSVG/hartOff.svg';
 import HartOn from '../../images/MYSVG/hartOn.svg';
 
@@ -74,6 +76,18 @@ const CamperCard = ({ card }) => {
             <Styled.Feature>
               <img src={Beds} alt="Beds" width="20" height="20" />
               {card.details.beds} Beds
+            </Styled.Feature>
+          )}
+          {card.details.TV > 0 && (
+            <Styled.Feature>
+              <img src={TV} alt="TV" width="20" height="20" />
+              {card.details.TV} TV
+            </Styled.Feature>
+          )}
+          {card.details.bathroom > 0 && (
+            <Styled.Feature>
+              <img src={WC} alt="WC" width="20" height="20" />
+              {card.details.bathroom} WC
             </Styled.Feature>
           )}
           {card.details.airConditioner === 1 && (

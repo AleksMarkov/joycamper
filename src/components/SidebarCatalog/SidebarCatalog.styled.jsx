@@ -25,7 +25,7 @@ export const LoadMoreButton = styled.button`
   margin-top: 20px;
   margin-bottom: 100px;
   position: relative; 
-  left: 370px; 
+  margin-left: 370px; 
 
   &:hover {
     border: 1px solid #e44848;

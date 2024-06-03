@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { filterInterests } from '../../redux/cards/interestsSlice'; 
 import * as Styled from './MainFavorites.styled';
 import { ReactComponent as Ac } from '../../images/MYSVG/AC.svg';
 import { ReactComponent as Transmission } from '../../images/MYSVG/transmission.svg';
@@ -11,6 +13,7 @@ import { ReactComponent as Alcove } from '../../images/MYSVG/Alcove.svg';
 import Map from '../../images/MYSVG/Map.svg';
 
 const MainFavorites = () => {
+  const dispatch = useDispatch();
   const [acSelected, setAcSelected] = useState(false);
   const [automaticSelected, setAutomaticSelected] = useState(false);
   const [kitchenSelected, setKitchenSelected] = useState(false);
@@ -33,9 +36,23 @@ const MainFavorites = () => {
     setLocation(event.target.value); 
   };
 
+  const handleSearch = () => {
+    dispatch(filterInterests({
+      acSelected,
+      automaticSelected,
+      kitchenSelected,
+      tvSelected,
+      showerSelected,
+      vanSelected,
+      fullSelected,
+      alcoveSelected,
+      location,
+    }));
+  };
+
   return (
     <Styled.Container>
-      <Styled.LocationSection>
+          <Styled.LocationSection>
         <Styled.SupportingText>Location</Styled.SupportingText>
         <Styled.InputForm>
           <Styled.Input
@@ -134,10 +151,9 @@ const MainFavorites = () => {
           </Styled.Filters>
         </Styled.ContainerVehicle>
       </Styled.FiltersSection>
-      <Styled.Button>Search</Styled.Button>
+      <Styled.Button onClick={handleSearch}>Search</Styled.Button>
     </Styled.Container>
   );
 };
 
 export default MainFavorites;
-

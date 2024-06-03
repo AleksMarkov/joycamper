@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import CamperCard from 'components/CamperCard/CamperCard.jsx';
-import * as Styled from './SidebarFavorites.styled.jsx';
+import CamperCard from 'components/CamperCard/CamperCard';
+import * as Styled from './SidebarFavorites.styled';
 
 const SidebarFavorites = () => {
-  const interestingCards = useSelector(state => state.interests.interestingCards);
+  const filteredCards = useSelector(state => state.interests.filteredCards);
   const [visibleCount, setVisibleCount] = useState(4);
 
   const handleLoadMore = () => {
@@ -13,8 +13,8 @@ const SidebarFavorites = () => {
 
   return (
     <Styled.Container>
-      {interestingCards.length > 0 ? (
-        interestingCards.slice(0, visibleCount).map(card => (
+      {filteredCards.length > 0 ? (
+        filteredCards.slice(0, visibleCount).map(card => (
           <CamperCard key={card.id} card={card} />
         ))
       ) : (
@@ -22,7 +22,7 @@ const SidebarFavorites = () => {
           This page is for chosen campers. Please go to the <Styled.Highlight>Catalog Campers</Styled.Highlight> and choose the ones that interest you.
         </Styled.EmptyMessage>
       )}
-      {visibleCount < interestingCards.length && (
+      {visibleCount < filteredCards.length && (
         <Styled.LoadMoreButton onClick={handleLoadMore}>
           Load more
         </Styled.LoadMoreButton>
