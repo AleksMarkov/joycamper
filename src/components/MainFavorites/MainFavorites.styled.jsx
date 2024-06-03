@@ -99,7 +99,7 @@ export const Filters = styled.div`
 `;
 
 export const FilterButton = styled.button`
-  border: 1px solid ${({ isSelected }) => (isSelected ? '#e44848' : 'rgba(16, 24, 40, 0.2)')};
+  border: 1px solid ${({ isselected }) => (isselected ? '#e44848' : 'rgba(16, 24, 40, 0.2)')};
   border-radius: 10px;
   padding: 17px 27px;
   width: 114px;
@@ -107,7 +107,7 @@ export const FilterButton = styled.button`
   font-size: 16px;
   cursor: pointer;
   background-color: #fff;
-  // background-color: ${({ isSelected }) => (isSelected ? '#fdecec' : '#fff')};
+  // background-color: ${({ isselected }) => (isselected ? '#fdecec' : '#fff')};
   display: flex;
   flex-direction: column;
   justify-content: center;

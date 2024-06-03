@@ -10,27 +10,41 @@ import { ReactComponent as Fully } from '../../images/MYSVG/Fully.svg';
 import { ReactComponent as Alcove } from '../../images/MYSVG/Alcove.svg';
 import Map from '../../images/MYSVG/Map.svg';
 
-const MainCatalog = () => {
+const MainCatalog = ({ onSearch }) => {
   const [acSelected, setAcSelected] = useState(false);
   const [automaticSelected, setAutomaticSelected] = useState(false);
   const [kitchenSelected, setKitchenSelected] = useState(false);
   const [tvSelected, setTvSelected] = useState(false);
   const [showerSelected, setShowerSelected] = useState(false);
-  const [location, setLocation] = useState(''); 
-  const [vanSelected, setVanSelected] = useState(false);
-  const [fullSelected, setFullSelected] = useState(false);
-  const [alcoveSelected, setAlcoveSelected] = useState(false);
+  const [location, setLocation] = useState('');
+  const [selectedForms, setSelectedForms] = useState([]);
 
-  const handleVehicleSelect = (vehicleType, setVechicleType) => {
-    setVechicleType((prevState) => !prevState);
+  const handleVehicleSelect = (vehicleType) => {
+    setSelectedForms((prevSelectedForms) =>
+      prevSelectedForms.includes(vehicleType)
+        ? prevSelectedForms.filter((type) => type !== vehicleType)
+        : [...prevSelectedForms, vehicleType]
+    );
   };
 
-  const handleEquipmentSelect = (equipmentType, setEquipmentType) => {
+  const handleEquipmentSelect = (setEquipmentType) => {
     setEquipmentType((prevState) => !prevState);
   };
 
   const handleLocationChange = (event) => {
-    setLocation(event.target.value); 
+    setLocation(event.target.value);
+  };
+
+  const handleSearchClick = () => {
+    onSearch({
+      acSelected,
+      automaticSelected,
+      kitchenSelected,
+      tvSelected,
+      showerSelected,
+      location,
+      selectedForms,
+    });
   };
 
   return (
@@ -42,8 +56,8 @@ const MainCatalog = () => {
             type="text"
             placeholder="Kyiv, Ukraine"
             icon={Map}
-            value={location} 
-            onChange={handleLocationChange} 
+            value={location}
+            onChange={handleLocationChange}
           />
         </Styled.InputForm>
       </Styled.LocationSection>
@@ -54,8 +68,8 @@ const MainCatalog = () => {
           <Styled.Divider />
           <Styled.Filters>
             <Styled.FilterButton
-              isSelected={acSelected}
-              onClick={() => handleEquipmentSelect('AC', setAcSelected)}
+              isselected={acSelected}
+              onClick={() => handleEquipmentSelect(setAcSelected)}
             >
               <Styled.IconWrapper>
                 <Ac width="32" height="32" />
@@ -63,8 +77,8 @@ const MainCatalog = () => {
               <Styled.ButtonText>AC</Styled.ButtonText>
             </Styled.FilterButton>
             <Styled.FilterButton
-              isSelected={automaticSelected}
-              onClick={() => handleEquipmentSelect('Automatic', setAutomaticSelected)}
+              isselected={automaticSelected}
+              onClick={() => handleEquipmentSelect(setAutomaticSelected)}
             >
               <Styled.IconWrapper>
                 <Transmission width="32" height="32" />
@@ -72,8 +86,8 @@ const MainCatalog = () => {
               <Styled.ButtonText>Automatic</Styled.ButtonText>
             </Styled.FilterButton>
             <Styled.FilterButton
-              isSelected={kitchenSelected}
-              onClick={() => handleEquipmentSelect('Kitchen', setKitchenSelected)}
+              isselected={kitchenSelected}
+              onClick={() => handleEquipmentSelect(setKitchenSelected)}
             >
               <Styled.IconWrapper>
                 <Kitchen width="32" height="32" />
@@ -81,8 +95,8 @@ const MainCatalog = () => {
               <Styled.ButtonText>Kitchen</Styled.ButtonText>
             </Styled.FilterButton>
             <Styled.FilterButton
-              isSelected={tvSelected}
-              onClick={() => handleEquipmentSelect('TV', setTvSelected)}
+              isselected={tvSelected}
+              onClick={() => handleEquipmentSelect(setTvSelected)}
             >
               <Styled.IconWrapper>
                 <TV width="32" height="32" />
@@ -90,8 +104,8 @@ const MainCatalog = () => {
               <Styled.ButtonText>TV</Styled.ButtonText>
             </Styled.FilterButton>
             <Styled.FilterButton
-              isSelected={showerSelected}
-              onClick={() => handleEquipmentSelect('Shower', setShowerSelected)}
+              isselected={showerSelected}
+              onClick={() => handleEquipmentSelect(setShowerSelected)}
             >
               <Styled.IconWrapper>
                 <Shower width="32" height="32" />
@@ -105,8 +119,8 @@ const MainCatalog = () => {
           <Styled.Divider />
           <Styled.Filters>
             <Styled.FilterButton
-              isSelected={vanSelected}
-              onClick={() => handleVehicleSelect('panelTruck', setVanSelected)}
+              isselected={selectedForms.includes('panelTruck')}
+              onClick={() => handleVehicleSelect('panelTruck')}
             >
               <Styled.IconWrapper>
                 <Van width="40" height="28" />
@@ -114,8 +128,8 @@ const MainCatalog = () => {
               <Styled.ButtonText>Van</Styled.ButtonText>
             </Styled.FilterButton>
             <Styled.FilterButton
-              isSelected={fullSelected}
-              onClick={() => handleVehicleSelect('fullyIntegrated',setFullSelected )}
+              isselected={selectedForms.includes('fullyIntegrated')}
+              onClick={() => handleVehicleSelect('fullyIntegrated')}
             >
               <Styled.IconWrapper>
                 <Fully width="40" height="28" />
@@ -123,8 +137,8 @@ const MainCatalog = () => {
               <Styled.ButtonText>Fully Integrated</Styled.ButtonText>
             </Styled.FilterButton>
             <Styled.FilterButton
-              isSelected={alcoveSelected}
-              onClick={() => handleVehicleSelect('alcove',setAlcoveSelected)}
+              isselected={selectedForms.includes('alcove')}
+              onClick={() => handleVehicleSelect('alcove')}
             >
               <Styled.IconWrapper>
                 <Alcove width="40" height="28" />
@@ -134,7 +148,7 @@ const MainCatalog = () => {
           </Styled.Filters>
         </Styled.ContainerVehicle>
       </Styled.FiltersSection>
-      <Styled.Button>Search</Styled.Button>
+      <Styled.Button onClick={handleSearchClick}>Search</Styled.Button>
     </Styled.Container>
   );
 };

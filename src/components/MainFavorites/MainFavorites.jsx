@@ -54,7 +54,7 @@ const MainFavorites = () => {
           <Styled.Divider />
           <Styled.Filters>
             <Styled.FilterButton
-              isSelected={acSelected}
+              isselected={acSelected}
               onClick={() => handleEquipmentSelect('AC', setAcSelected)}
             >
               <Styled.IconWrapper>
@@ -63,7 +63,7 @@ const MainFavorites = () => {
               <Styled.ButtonText>AC</Styled.ButtonText>
             </Styled.FilterButton>
             <Styled.FilterButton
-              isSelected={automaticSelected}
+              isselected={automaticSelected}
               onClick={() => handleEquipmentSelect('Automatic', setAutomaticSelected)}
             >
               <Styled.IconWrapper>
@@ -72,7 +72,7 @@ const MainFavorites = () => {
               <Styled.ButtonText>Automatic</Styled.ButtonText>
             </Styled.FilterButton>
             <Styled.FilterButton
-              isSelected={kitchenSelected}
+              isselected={kitchenSelected}
               onClick={() => handleEquipmentSelect('Kitchen', setKitchenSelected)}
             >
               <Styled.IconWrapper>
@@ -81,7 +81,7 @@ const MainFavorites = () => {
               <Styled.ButtonText>Kitchen</Styled.ButtonText>
             </Styled.FilterButton>
             <Styled.FilterButton
-              isSelected={tvSelected}
+              isselected={tvSelected}
               onClick={() => handleEquipmentSelect('TV', setTvSelected)}
             >
               <Styled.IconWrapper>
@@ -90,7 +90,7 @@ const MainFavorites = () => {
               <Styled.ButtonText>TV</Styled.ButtonText>
             </Styled.FilterButton>
             <Styled.FilterButton
-              isSelected={showerSelected}
+              isselected={showerSelected}
               onClick={() => handleEquipmentSelect('Shower', setShowerSelected)}
             >
               <Styled.IconWrapper>
@@ -105,7 +105,7 @@ const MainFavorites = () => {
           <Styled.Divider />
           <Styled.Filters>
             <Styled.FilterButton
-              isSelected={vanSelected}
+              isselected={vanSelected}
               onClick={() => handleVehicleSelect('panelTruck', setVanSelected)}
             >
               <Styled.IconWrapper>
@@ -114,7 +114,7 @@ const MainFavorites = () => {
               <Styled.ButtonText>Van</Styled.ButtonText>
             </Styled.FilterButton>
             <Styled.FilterButton
-              isSelected={fullSelected}
+              isselected={fullSelected}
               onClick={() => handleVehicleSelect('fullyIntegrated',setFullSelected )}
             >
               <Styled.IconWrapper>
@@ -123,7 +123,7 @@ const MainFavorites = () => {
               <Styled.ButtonText>Fully Integrated</Styled.ButtonText>
             </Styled.FilterButton>
             <Styled.FilterButton
-              isSelected={alcoveSelected}
+              isselected={alcoveSelected}
               onClick={() => handleVehicleSelect('alcove',setAlcoveSelected)}
             >
               <Styled.IconWrapper>

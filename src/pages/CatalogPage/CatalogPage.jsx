@@ -7,9 +7,9 @@ import * as Styled from './CatalogPage.styled.jsx';
 const CatalogPage = () => {
   const [cards, setCards] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [filteredCards, setFilteredCards] = useState([]);
 
   useEffect(() => {
-    // Fetch the cards from the API
     fetch('https://665b72a0003609eda460e874.mockapi.io/api/adverts')
       .then(response => response.json())
       .then(data => {
@@ -22,16 +22,32 @@ const CatalogPage = () => {
       });
   }, []);
 
+  const handleSearch = (filters) => {
+    const filtered = cards.filter(card => {
+
+      return (
+        (!filters.acSelected || card.details.airConditioner > 0) &&
+        (!filters.automaticSelected || card.transmission.toLowerCase() === 'automatic') &&
+        (!filters.kitchenSelected || card.details.kitchen > 0) &&
+        (!filters.tvSelected || card.details.TV === 1) &&
+        (!filters.showerSelected || card.details.shower > 0) &&
+        (!filters.location || card.location.toLowerCase().includes(filters.location.toLowerCase())) &&
+        (filters.selectedForms.length === 0 || filters.selectedForms.includes(card.form))
+      );
+    });
+    setFilteredCards(filtered);
+  };
+
   return (
     <Styled.ContainerCatalog>
       <HeaderCatalog />
       <Styled.ContentWrapper>
         <Styled.MainContent>
-          <MainCatalog />
+          <MainCatalog onSearch={handleSearch} />
         </Styled.MainContent>
         {!loading && (
           <Styled.SidebarContent>
-            <SidebarCatalog cards={cards} />
+            <SidebarCatalog cards={filteredCards.length ? filteredCards : cards} />
           </Styled.SidebarContent>
         )}
       </Styled.ContentWrapper>
