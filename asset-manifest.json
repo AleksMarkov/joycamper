@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/joycamper/static/css/main.7acaea2f.css",
-    "main.js": "/joycamper/static/js/main.1f8b1924.js",
+    "main.js": "/joycamper/static/js/main.3b528dc0.js",
     "static/media/camping.jpg": "/joycamper/static/media/camping.1b8ba1e849ce89078fad.jpg",
     "static/media/AC.svg": "/joycamper/static/media/AC.e958509129baf1cbc457d03d571594e6.svg",
     "static/media/Alcove.svg": "/joycamper/static/media/Alcove.c88eac51ddce701735a9d59ac487eaf7.svg",
     "static/media/Van.svg": "/joycamper/static/media/Van.0e4e5175d46d2dd924033e611a60839a.svg",
     "static/media/Fully.svg": "/joycamper/static/media/Fully.ba2e206ff929e672c739401c1cbd43cd.svg",
     "static/media/transmission.svg": "/joycamper/static/media/transmission.302635f96bd7f32b154fc7ed7f45ba3f.svg",
-    "static/media/users.svg": "/joycamper/static/media/users.72c7a0add9759233c951c51a8c6fac51.svg",
     "index.html": "/joycamper/index.html",
+    "static/media/users.svg": "/joycamper/static/media/users.72c7a0add9759233c951c51a8c6fac51.svg",
     "static/media/hartOn.svg": "/joycamper/static/media/hartOn.b9a7834e44d8b869a190a5af63eab30b.svg",
     "static/media/hartOff.svg": "/joycamper/static/media/hartOff.eaf1f75040c7665a5b109514d8630386.svg",
     "static/media/star.svg": "/joycamper/static/media/star.feeb7a154b9aca3fbe72315a0b5aaa2f.svg",
@@ -19,11 +19,12 @@
     "static/media/engine.svg": "/joycamper/static/media/engine.b740046e278da150a435f31955d9f960.svg",
     "static/media/Map.svg": "/joycamper/static/media/Map.5622ede108b960a5619a4280ef97ecf4.svg",
     "static/media/shower.svg": "/joycamper/static/media/shower.1b34cb6fae7106a305740b6f0fbde0ea.svg",
+    "static/media/close.svg": "/joycamper/static/media/close.25dc3f46a342a188874fa545ced03ca2.svg",
     "main.7acaea2f.css.map": "/joycamper/static/css/main.7acaea2f.css.map",
-    "main.1f8b1924.js.map": "/joycamper/static/js/main.1f8b1924.js.map"
+    "main.3b528dc0.js.map": "/joycamper/static/js/main.3b528dc0.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.1f8b1924.js"
+    "static/js/main.3b528dc0.js"
   ]
 }
