@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addInterest, removeInterest } from '../../redux/cards/interestsSlice';
 import * as Styled from './CamperCard.styled.jsx';
+import ShowMore from '../ShowMore/ShowMore'; // Import ShowMore component
 import Star from '../../images/MYSVG/star.svg';
 import Map from '../../images/MYSVG/Map.svg';
 import Users from '../../images/MYSVG/users.svg';
@@ -18,6 +19,7 @@ import HartOn from '../../images/MYSVG/hartOn.svg';
 const CamperCard = ({ card }) => {
   const dispatch = useDispatch();
   const interestingCards = useSelector(state => state.interests.interestingCards);
+  const [showModal, setShowModal] = useState(false); // State to control modal visibility
 
   const isInteresting = interestingCards.some(interestingCard => interestingCard.id === card.id);
 
@@ -34,72 +36,75 @@ const CamperCard = ({ card }) => {
   const formattedPrice = `€${parseFloat(card.price).toFixed(2).replace('.', ',')}`;
 
   return (
-    <Styled.Card>
-      <Styled.ImageContainer>
-        <Styled.Image src={card.gallery[0]} alt="Picture_of_camper" />
-      </Styled.ImageContainer>
-      <Styled.InfoContainer>
-        <Styled.TitleContainer>
-          <Styled.Title>{card.name}</Styled.Title>
-          <Styled.Price>{formattedPrice}</Styled.Price>
-          <Styled.IconWrapper onClick={handleInterestClick}>
-            <img src={isInteresting ? HartOn : HartOff} width="24" height="24" alt="Hart Icon" />
-          </Styled.IconWrapper>
-        </Styled.TitleContainer>
-        <Styled.ReviewsContainer>
-          <img src={Star} alt="Star" width="16" height="16" />
-          <Styled.ReviewText>{averageRating} ({ratings.length} Reviews)</Styled.ReviewText>
-          <img src={Map} alt="Map_point" width="16" height="16" />
-          <Styled.Location>{card.location}</Styled.Location>
-        </Styled.ReviewsContainer>
-        <Styled.Description>{card.description}</Styled.Description>
-        <Styled.FeaturesContainer>
-          <Styled.Feature>
-            <img src={Users} alt="Adalts" width="20" height="20" />
-            {card.adults} adults
-          </Styled.Feature>
-          <Styled.Feature>
-            <img src={Transmission} alt="Transmission" width="20" height="20" />
-            {card.transmission}
-          </Styled.Feature>
-          <Styled.Feature>
-            <img src={Engine} alt="Engine" width="20" height="20" />
-            {card.engine}
-          </Styled.Feature>
-          {card.details.kitchen === 1 && (
+    <>
+      <Styled.Card>
+        <Styled.ImageContainer>
+          <Styled.Image src={card.gallery[0]} alt="Picture_of_camper" />
+        </Styled.ImageContainer>
+        <Styled.InfoContainer>
+          <Styled.TitleContainer>
+            <Styled.Title>{card.name}</Styled.Title>
+            <Styled.Price>{formattedPrice}</Styled.Price>
+            <Styled.IconWrapper onClick={handleInterestClick}>
+              <img src={isInteresting ? HartOn : HartOff} width="24" height="24" alt="Hart Icon" />
+            </Styled.IconWrapper>
+          </Styled.TitleContainer>
+          <Styled.ReviewsContainer>
+            <img src={Star} alt="Star" width="16" height="16" />
+            <Styled.ReviewText>{averageRating} ({ratings.length} Reviews)</Styled.ReviewText>
+            <img src={Map} alt="Map_point" width="16" height="16" />
+            <Styled.Location>{card.location}</Styled.Location>
+          </Styled.ReviewsContainer>
+          <Styled.Description>{card.description}</Styled.Description>
+          <Styled.FeaturesContainer>
             <Styled.Feature>
-              <img src={Kitchen} alt="Kitchen" width="20" height="20" />
-              Kitchen
+              <img src={Users} alt="Adalts" width="20" height="20" />
+              {card.adults} adults
             </Styled.Feature>
-          )}
-          {card.details.beds > 0 && (
             <Styled.Feature>
-              <img src={Beds} alt="Beds" width="20" height="20" />
-              {card.details.beds} Beds
+              <img src={Transmission} alt="Transmission" width="20" height="20" />
+              {card.transmission}
             </Styled.Feature>
-          )}
-          {card.details.TV > 0 && (
             <Styled.Feature>
-              <img src={TV} alt="TV" width="20" height="20" />
-              {card.details.TV} TV
+              <img src={Engine} alt="Engine" width="20" height="20" />
+              {card.engine}
             </Styled.Feature>
-          )}
-          {card.details.bathroom > 0 && (
-            <Styled.Feature>
-              <img src={WC} alt="WC" width="20" height="20" />
-              {card.details.bathroom} WC
-            </Styled.Feature>
-          )}
-          {card.details.airConditioner === 1 && (
-            <Styled.Feature>
-              <img src={AC} alt="AC" width="20" height="20" />
-              AC
-            </Styled.Feature>
-          )}
-        </Styled.FeaturesContainer>
-        <Styled.ShowMoreButton>Show more</Styled.ShowMoreButton>
-      </Styled.InfoContainer>
-    </Styled.Card>
+            {card.details.kitchen === 1 && (
+              <Styled.Feature>
+                <img src={Kitchen} alt="Kitchen" width="20" height="20" />
+                Kitchen
+              </Styled.Feature>
+            )}
+            {card.details.beds > 0 && (
+              <Styled.Feature>
+                <img src={Beds} alt="Beds" width="20" height="20" />
+                {card.details.beds} Beds
+              </Styled.Feature>
+            )}
+            {card.details.TV > 0 && (
+              <Styled.Feature>
+                <img src={TV} alt="TV" width="20" height="20" />
+                {card.details.TV} TV
+              </Styled.Feature>
+            )}
+            {card.details.bathroom > 0 && (
+              <Styled.Feature>
+                <img src={WC} alt="WC" width="20" height="20" />
+                {card.details.bathroom} WC
+              </Styled.Feature>
+            )}
+            {card.details.airConditioner === 1 && (
+              <Styled.Feature>
+                <img src={AC} alt="AC" width="20" height="20" />
+                AC
+              </Styled.Feature>
+            )}
+          </Styled.FeaturesContainer>
+          <Styled.ShowMoreButton onClick={() => setShowModal(true)}>Show more</Styled.ShowMoreButton>
+        </Styled.InfoContainer>
+      </Styled.Card>
+      {showModal && <ShowMore card={card} showModal={setShowModal} />}
+    </>
   );
 };
 
