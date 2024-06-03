@@ -32,7 +32,7 @@ const CatalogPage = () => {
         (!filters.tvSelected || card.details.TV === 1) &&
         (!filters.showerSelected || card.details.shower === 1) &&
         (!filters.location || card.location.toLowerCase().includes(filters.location.toLowerCase())) &&
-        (filters.selectedForms.length === 0 || filters.selectedForms.includes(card.form))
+        (!filters.selectedVehicle || card.form === filters.selectedVehicle)
       );
     });
     setFilteredCards(filtered);

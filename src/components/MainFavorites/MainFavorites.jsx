@@ -24,8 +24,20 @@ const MainFavorites = () => {
   const [fullSelected, setFullSelected] = useState(false);
   const [alcoveSelected, setAlcoveSelected] = useState(false);
 
-  const handleVehicleSelect = (vehicleType, setVechicleType) => {
-    setVechicleType((prevState) => !prevState);
+  const handleVehicleSelect = (vehicleType) => {
+    if (vehicleType === 'van') {
+      setVanSelected(!vanSelected);
+      setFullSelected(false);
+      setAlcoveSelected(false);
+    } else if (vehicleType === 'fullyIntegrated') {
+      setFullSelected(!fullSelected);
+      setVanSelected(false);
+      setAlcoveSelected(false);
+    } else if (vehicleType === 'alcove') {
+      setAlcoveSelected(!alcoveSelected);
+      setVanSelected(false);
+      setFullSelected(false);
+    }
   };
 
   const handleEquipmentSelect = (equipmentType, setEquipmentType) => {
@@ -52,7 +64,7 @@ const MainFavorites = () => {
 
   return (
     <Styled.Container>
-          <Styled.LocationSection>
+      <Styled.LocationSection>
         <Styled.SupportingText>Location</Styled.SupportingText>
         <Styled.InputForm>
           <Styled.Input
@@ -123,7 +135,7 @@ const MainFavorites = () => {
           <Styled.Filters>
             <Styled.FilterButton
               isselected={vanSelected}
-              onClick={() => handleVehicleSelect('panelTruck', setVanSelected)}
+              onClick={() => handleVehicleSelect('van')}
             >
               <Styled.IconWrapper>
                 <Van width="40" height="28" />
@@ -132,7 +144,7 @@ const MainFavorites = () => {
             </Styled.FilterButton>
             <Styled.FilterButton
               isselected={fullSelected}
-              onClick={() => handleVehicleSelect('fullyIntegrated',setFullSelected )}
+              onClick={() => handleVehicleSelect('fullyIntegrated')}
             >
               <Styled.IconWrapper>
                 <Fully width="40" height="28" />
@@ -141,7 +153,7 @@ const MainFavorites = () => {
             </Styled.FilterButton>
             <Styled.FilterButton
               isselected={alcoveSelected}
-              onClick={() => handleVehicleSelect('alcove',setAlcoveSelected)}
+              onClick={() => handleVehicleSelect('alcove')}
             >
               <Styled.IconWrapper>
                 <Alcove width="40" height="28" />

@@ -17,13 +17,11 @@ const MainCatalog = ({ onSearch }) => {
   const [tvSelected, setTvSelected] = useState(false);
   const [showerSelected, setShowerSelected] = useState(false);
   const [location, setLocation] = useState('');
-  const [selectedForms, setSelectedForms] = useState([]);
+  const [selectedVehicle, setSelectedVehicle] = useState('');
 
   const handleVehicleSelect = (vehicleType) => {
-    setSelectedForms((prevSelectedForms) =>
-      prevSelectedForms.includes(vehicleType)
-        ? prevSelectedForms.filter((type) => type !== vehicleType)
-        : [...prevSelectedForms, vehicleType]
+    setSelectedVehicle((prevSelectedVehicle) =>
+      prevSelectedVehicle === vehicleType ? '' : vehicleType
     );
   };
 
@@ -43,7 +41,7 @@ const MainCatalog = ({ onSearch }) => {
       tvSelected,
       showerSelected,
       location,
-      selectedForms,
+      selectedVehicle,
     });
   };
 
@@ -119,8 +117,8 @@ const MainCatalog = ({ onSearch }) => {
           <Styled.Divider />
           <Styled.Filters>
             <Styled.FilterButton
-              isselected={selectedForms.includes('panelTruck')}
-              onClick={() => handleVehicleSelect('panelTruck')}
+              isselected={selectedVehicle === 'van'}
+              onClick={() => handleVehicleSelect('van')}
             >
               <Styled.IconWrapper>
                 <Van width="40" height="28" />
@@ -128,7 +126,7 @@ const MainCatalog = ({ onSearch }) => {
               <Styled.ButtonText>Van</Styled.ButtonText>
             </Styled.FilterButton>
             <Styled.FilterButton
-              isselected={selectedForms.includes('fullyIntegrated')}
+              isselected={selectedVehicle === 'fullyIntegrated'}
               onClick={() => handleVehicleSelect('fullyIntegrated')}
             >
               <Styled.IconWrapper>
@@ -137,7 +135,7 @@ const MainCatalog = ({ onSearch }) => {
               <Styled.ButtonText>Fully Integrated</Styled.ButtonText>
             </Styled.FilterButton>
             <Styled.FilterButton
-              isselected={selectedForms.includes('alcove')}
+              isselected={selectedVehicle === 'alcove'}
               onClick={() => handleVehicleSelect('alcove')}
             >
               <Styled.IconWrapper>
