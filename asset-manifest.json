@@ -1,30 +1,39 @@
 {
   "files": {
     "main.css": "/joycamper/static/css/main.7acaea2f.css",
-    "main.js": "/joycamper/static/js/main.3b528dc0.js",
-    "static/media/camping.jpg": "/joycamper/static/media/camping.1b8ba1e849ce89078fad.jpg",
+    "main.js": "/joycamper/static/js/main.02b66f6c.js",
     "static/media/AC.svg": "/joycamper/static/media/AC.e958509129baf1cbc457d03d571594e6.svg",
     "static/media/Alcove.svg": "/joycamper/static/media/Alcove.c88eac51ddce701735a9d59ac487eaf7.svg",
     "static/media/Van.svg": "/joycamper/static/media/Van.0e4e5175d46d2dd924033e611a60839a.svg",
     "static/media/Fully.svg": "/joycamper/static/media/Fully.ba2e206ff929e672c739401c1cbd43cd.svg",
+    "static/media/logoOutline.svg": "/joycamper/static/media/logoOutline.36ce6b26f0778aea7698c10347f79a6a.svg",
     "static/media/transmission.svg": "/joycamper/static/media/transmission.302635f96bd7f32b154fc7ed7f45ba3f.svg",
+    "static/media/Toilet.svg": "/joycamper/static/media/Toilet.a39d55459c0c28e066f7a7901c540c23.svg",
     "index.html": "/joycamper/index.html",
     "static/media/users.svg": "/joycamper/static/media/users.72c7a0add9759233c951c51a8c6fac51.svg",
+    "static/media/AirConditioner.svg": "/joycamper/static/media/AirConditioner.27f8033d58c72817c26cc08264abccc2.svg",
     "static/media/hartOn.svg": "/joycamper/static/media/hartOn.b9a7834e44d8b869a190a5af63eab30b.svg",
     "static/media/hartOff.svg": "/joycamper/static/media/hartOff.eaf1f75040c7665a5b109514d8630386.svg",
+    "static/media/starno.svg": "/joycamper/static/media/starno.e66424b0174695a62011dd731c1d7adb.svg",
     "static/media/star.svg": "/joycamper/static/media/star.feeb7a154b9aca3fbe72315a0b5aaa2f.svg",
+    "static/media/Radio.svg": "/joycamper/static/media/Radio.5f08a7d2225ff4fee8600833efe7daec.svg",
     "static/media/beds.svg": "/joycamper/static/media/beds.72f21609b5a37c90350c0d90dc8f0973.svg",
     "static/media/TV.svg": "/joycamper/static/media/TV.f0520bf3f91bdbf212fcd30d65725d9a.svg",
+    "static/media/Freezer.svg": "/joycamper/static/media/Freezer.9fedab188a5220bbf0c628260df3b189.svg",
+    "static/media/Microwave.svg": "/joycamper/static/media/Microwave.747d2d9ddbe1a3b7ed46543d1ae1af9e.svg",
+    "static/media/hob.svg": "/joycamper/static/media/hob.d6d9b63dcc231cc71c94b9e433eff56b.svg",
     "static/media/kitchen.svg": "/joycamper/static/media/kitchen.ff2d9db2667fab36d80463a41842df55.svg",
     "static/media/engine.svg": "/joycamper/static/media/engine.b740046e278da150a435f31955d9f960.svg",
     "static/media/Map.svg": "/joycamper/static/media/Map.5622ede108b960a5619a4280ef97ecf4.svg",
+    "static/media/CD.svg": "/joycamper/static/media/CD.3889ac78bcd5fadadaef38a4df0ea7ac.svg",
+    "static/media/calendar.svg": "/joycamper/static/media/calendar.f76fce073f7d738b0deab14494548b55.svg",
     "static/media/shower.svg": "/joycamper/static/media/shower.1b34cb6fae7106a305740b6f0fbde0ea.svg",
     "static/media/close.svg": "/joycamper/static/media/close.25dc3f46a342a188874fa545ced03ca2.svg",
     "main.7acaea2f.css.map": "/joycamper/static/css/main.7acaea2f.css.map",
-    "main.3b528dc0.js.map": "/joycamper/static/js/main.3b528dc0.js.map"
+    "main.02b66f6c.js.map": "/joycamper/static/js/main.02b66f6c.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.3b528dc0.js"
+    "static/js/main.02b66f6c.js"
   ]
 }
