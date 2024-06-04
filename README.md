@@ -1,112 +1,77 @@
-# React homework template
+JoyCamper Application 
 
-Цей проект був створений за допомогою
-[Create React App](https://github.com/facebook/create-react-app). Для знайомства
-і налаштування додаткових можливостей
-[звернися до документації](https://facebook.github.io/create-react-app/docs/getting-started).
+This project is a web application for a company providing camper rental services in Ukraine. The application consists of three main pages and implements various features to enhance user experience. 
 
-## Створення репозиторію за шаблоном
+For Customers 
 
-Використовуй цей репозиторій організації GoIT як шаблон для створення репозиторію
-свого проєкта. Для цього натисни на кнопку `«Use this template»` і вибери опцію
-`«Create a new repository»`, як показано на зображенні.
+The JoyCamper Application allows users to browse, filter, and favorite different camper listings. The application includes the following pages: 
 
-![Creating repo from a template step 1](./assets/template-step-1.png)
+WelcomePage: Provides a general description of the services offered by the company. 
 
-На наступному кроці відкриється сторінка створення нового репозиторію. Заповни поле
-його імені, переконайся що репозиторій публічний, після чого натисни кнопку
-`«Create repository from template»`.
+CatalogPage: Displays a catalog of campers with various configurations. Users can filter the listings by location, equipment, and type. 
 
-![Creating repo from a template step 2](./assets/template-step-2.png)
+FavoritePage: Shows a list of camper listings that the user has added to their favorites. Users can filter the listings by location, equipment, and type. 
 
-Після того як репозиторій буде створено, необхідно перейти в налаштування
-створеного репозиторію на вкладку `Settings` > `Actions` > `General` як
-показано на зображенні.
+When viewing the Catalog or Favorites pages, each camper card includes a "Show more" button that provides additional information about the current camper, such as: 
 
-![Settings GitHub Actions permissions step 1](./assets/gh-actions-perm-1.png)
+Name 
 
-Проскроливши сторінку до самого кінця, у секції `«Workflow permissions»` вибери
-опцію `«Read and write permissions»` і постав галочку в чекбоксі. Це
-необхідно для автоматизації процесу деплою проєкту.
+Rating 
 
-![Settings GitHub Actions permissions step 2](./assets/gh-actions-perm-2.png)
+Location 
 
-Тепер у тебе є особистий репозиторій проекту, зі структурою файлів і папок
-репозиторію-шаблону. Далі працюй із ним як із будь-яким іншим особистим репозиторієм,
-клонуй його собі на комп'ютер, пиши код, роби комміти і відправляй їх на
-GitHub.
+Description 
 
-## Підготовка до роботи
+Features (AC, TV, shower, kitchen, etc.) 
 
-1. Переконайся що на комп'ютері встановлено LTS-версія Node.js.
-   [Завантаж і встанови](https://nodejs.org/en/) її якщо необхідно.
-2. Встанови базові залежності проєкту командою `npm install`.
-3. Запусти режим розробки, виконавши команду `npm start`.
-4. Перейди в браузері за адресою [http://localhost:3000](http://localhost:3000).
-   Ця сторінка буде автоматично перезавантажуватися після збереження змін у файлах проєкту.
+Users can also read reviews from other customers. 
 
-## Деплой
+Making a Reservation 
 
-Продакшн версія проєкту буде автоматично проходити лінтинг, збиратися і
-деплоїтися на GitHub Pages, у гілку `gh-pages`, щоразу, коли оновлюється
-гілка `main`. Наприклад, після прямого пушу або прийнятого пул-реквесту. Для цього
-необхідно у файлі `package.json` відредагувати поле `homepage`, замінивши
-`your_username` і `your_repo_name` на свої, і відправити зміни на GitHub.
+On the Catalog and Favorites pages, users can fill in a form with their name, email, desired rental date, and comments. This form allows users to send their order to the JoyCamper company, making it easy to reserve the perfect camper for their needs. 
 
-```json
-"homepage": "https://your_username.github.io/your_repo_name/"
-```
+For Developers 
 
-Далі необхідно зайти в налаштування GitHub-репозиторію (`Settings` > `Pages`) і
-виставити роздачу продакшн-версії файлів із папки `/root` гілки `gh-pages`, якщо
-це не було зроблено автоматично.
+Project Overview 
 
-![GitHub Pages settings](./assets/repo-settings.png)
+The JoyCamper Application is built using React and provides a seamless user experience through its component-based architecture. The application consists of three main pages and implements advanced features such as filtering, favoriting, and dynamic information display. 
 
-### Статус деплоя
+Routing 
 
-Статус деплою крайнього коміту відображається іконкою біля його ідентифікатора.
+The application uses React Router for managing routes. The implemented routes include: 
 
-- **Жовтий колір** - виконується збірка і деплой проєкту.
-- **Зелений колір** - деплой завершився успішно.
-- **Червоний колір** - під час лінтингу, сборки або деплою сталася помилка.
+/ - Home page with a general description of services. 
 
-Детальнішу інформацію про статус можна подивитися, клікнувши на іконку, і
-у вікні, що випадає, перейти за посиланням `Details`.
+/catalog - Catalog page displaying a list of campers. 
 
-![Deployment status](./assets/deploy-status.png)
+/favorites - Favorites page showing user's favorite listings. 
 
-### Жива сторінка
+Users are redirected to the home page if they navigate to a non-existent route. 
 
-Через якийсь час, зазвичай кілька хвилин, живу сторінку можна буде подивитися
-за адресою, вказаною у відредагованій властивості `homepage`. Наприклад, ось
-посилання на живу версію для цього репозиторію
-[https://goitacademy.github.io/react-homework-template](https://goitacademy.github.io/react-homework-template).
+Filtering Options 
 
-Якщо відкривається порожня сторінка, переконайся, що у вкладці `Console` немає помилок
-пов'язаних із неправильними шляхами до CSS і JS файлів проєкту (**404**). Швидше 
-за все у тебе неправильне значення властивості `homepage` у файлі `package.json`.
+The application includes advanced filtering options: 
 
-### Маршрутизація
+Text Input Filter: Filters listings by location based on user input. 
 
-Якщо додаток використовує бібліотеку `react-router-dom` для маршрутизації,
-необхідно додатково налаштувати компонент `<BrowserRouter>`, передавши у пропе
-`basename` точну назву твого репозиторію. Слеш на початку рядка обов'язковий.
+Checkbox Filters: Filters listings by available equipment. 
 
-```jsx
-<BrowserRouter basename="/your_repo_name">
-  <App />
-</BrowserRouter>
-```
+Radio Button Filters: Filters listings by camper type. 
 
-## Як це працює
+Technical Features 
 
-![How it works](./assets/how-it-works.png)
+Advertisement Card: Each camper listing is displayed using a custom-designed advertisement card. 
 
-1. Після кожного пушу в гілку `main` GitHub-репозиторія, запускається спеціальний
-   скрипт (GitHub Action) з файла `.github/workflows/deploy.yml`.
-2. Усі файли репозиторію копіюються на сервер, де проект ініціалізується і
-   проходить лінтинг і збірку перед деплоєм.
-3. Якщо всі кроки пройшли успішно, зібрана продакшн-версія файлів проєкту
-   відправляється в гілку `gh-pages`. В іншому випадку, в лозі виконання
-   скрипта буде вказано в чому проблема.
+Pagination: The catalog page initially renders 4 listings. More listings can be loaded by clicking the "Load more" button. 
+
+Favorite Functionality: Users can add listings to their favorites by clicking a heart-shaped button on the advertisement card. The button color changes to indicate the favorite status. 
+
+State Persistence: The favorite status of listings is preserved even after the page is refreshed. 
+
+Modal Window: Clicking the "Show more" button on an advertisement card opens a modal window with detailed information about the camper. The modal window can be closed by clicking a close button, the backdrop, or pressing the Esc key. 
+
+Form Validation: The modal window includes a booking form with fields for name, email, booking date, and comment. The form validates input and ensures mandatory fields are filled before submission. 
+
+Pricing Display: Rental prices are displayed with a comma separator (e.g., 8000,00). 
+
+ 

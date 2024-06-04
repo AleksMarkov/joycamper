@@ -31,6 +31,7 @@ const Booking = () => {
     } else {
       setErrors({});
       console.log({ name, email, date, comment });
+      window.location.reload(); 
     }
   };
 

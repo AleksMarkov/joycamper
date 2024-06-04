@@ -1,105 +1,77 @@
-# React homework template
+JoyCamper Application 
 
-This project was created with
-[Create React App](https://github.com/facebook/create-react-app). To get
-acquainted and configure additional features
-[refer to documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project is a web application for a company providing camper rental services in Ukraine. The application consists of three main pages and implements various features to enhance user experience. 
 
-## Creating a repository by template
+For Customers 
 
-Use this GoIT repository as a template for creating a repository
-of your project. To use it just tap the `«Use this template»` button and choose
-`«Create a new repository»` option, as you can see on the image below.
+The JoyCamper Application allows users to browse, filter, and favorite different camper listings. The application includes the following pages: 
 
-![Creating repo from a template step 1](./assets/template-step-1.png)
+WelcomePage: Provides a general description of the services offered by the company. 
 
-The page for creating a new repository will open on the next step. Fill out
-the Name field and make sure the repository is public, then click
-`«Create repository from template»` button.
+CatalogPage: Displays a catalog of campers with various configurations. Users can filter the listings by location, equipment, and type. 
 
-![Creating repo from a template step 2](./assets/template-step-2.png)
+FavoritePage: Shows a list of camper listings that the user has added to their favorites. Users can filter the listings by location, equipment, and type. 
 
-You now have a personal project repository, having a repository-template file 
-and folder structure. After that, you can work with it as you would with any 
-other private repository: clone it on your computer, write code, commit, and 
-send it to GitHub.
+When viewing the Catalog or Favorites pages, each camper card includes a "Show more" button that provides additional information about the current camper, such as: 
 
-## Preparing for coding
+Name 
 
-1. Make sure you have an LTS version of Node.js installed on your computer.
-   [Download and install](https://nodejs.org/en/) if needed.
-2. Install the project's base dependencies with the `npm install` command.
-3. Start development mode by running the `npm start` command.
-4. Go to [http://localhost:3000](http://localhost:3000) in your browser. This
-   page will automatically reload after saving changes to the project files.
+Rating 
 
-## Deploy
+Location 
 
-The production version of the project will automatically be linted, built, and
-deployed to GitHub Pages, in the `gh-pages` branch, every time the `main` branch
-is updated. For example, after a direct push or an accepted pull request. To do
-this, you need to edit the `homepage` field in the `package.json` file,
-replacing `your_username` and `your_repo_name` with your own, and submit the
-changes to GitHub.
+Description 
 
-```json
-"homepage": "https://your_username.github.io/your_repo_name/"
-```
+Features (AC, TV, shower, kitchen, etc.) 
 
-Next, you need to go to the settings of the GitHub repository (`Settings` >
-`Pages`) and set the distribution of the production version of files from the
-`/root` folder of the `gh-pages` branch, if this was not done automatically.
+Users can also read reviews from other customers. 
 
-![GitHub Pages settings](./assets/repo-settings.png)
+Making a Reservation 
 
-### Deployment status
+On the Catalog and Favorites pages, users can fill in a form with their name, email, desired rental date, and comments. This form allows users to send their order to the JoyCamper company, making it easy to reserve the perfect camper for their needs. 
 
-The deployment status of the latest commit is displayed with an icon next to its
-ID.
+For Developers 
 
-- **Yellow color** - the project is being built and deployed.
-- **Green color** - deployment completed successfully.
-- **Red color** - an error occurred during linting, build or deployment.
+Project Overview 
 
-More detailed information about the status can be viewed by clicking on the
-icon, and in the drop-down window, follow the link `Details`.
+The JoyCamper Application is built using React and provides a seamless user experience through its component-based architecture. The application consists of three main pages and implements advanced features such as filtering, favoriting, and dynamic information display. 
 
-![Deployment status](./assets/deploy-status.png)
+Routing 
 
-### Live page
+The application uses React Router for managing routes. The implemented routes include: 
 
-After some time, usually a couple of minutes, the live page can be viewed at the
-address specified in the edited `homepage` property. For example, here is a link
-to a live version for this repository
-[https://goitacademy.github.io/react-homework-template](https://goitacademy.github.io/react-homework-template).
+/ - Home page with a general description of services. 
 
-If a blank page opens, make sure there are no errors in the `Console` tab
-related to incorrect paths to the CSS and JS files of the project (**404**). You
-most likely have the wrong value for the `homepage` property in the
-`package.json` file.
+/catalog - Catalog page displaying a list of campers. 
 
-### Routing
+/favorites - Favorites page showing user's favorite listings. 
 
-If your application uses the `react-router-dom` library for routing, you must
-additionally configure the `<BrowserRouter>` component by passing the exact name
-of your repository in the `basename` prop. Slashes at the beginning and end of
-the line are required.
+Users are redirected to the home page if they navigate to a non-existent route. 
 
-```jsx
-<BrowserRouter basename="/your_repo_name/">
-  <App />
-</BrowserRouter>
-```
+Filtering Options 
 
-## How it works
+The application includes advanced filtering options: 
 
-![How it works](./assets/how-it-works.png)
+Text Input Filter: Filters listings by location based on user input. 
 
-1. After each push to the `main` branch of the GitHub repository, a special
-   script (GitHub Action) is launched from the `.github/workflows/deploy.yml`
-   file.
-2. All repository files are copied to the server, where the project is
-   initialized and linted and built before deployment.
-3. If all steps are successful, the built production version of the project
-   files is sent to the `gh-pages` branch. Otherwise, the script execution log
-   will indicate what the problem is.
+Checkbox Filters: Filters listings by available equipment. 
+
+Radio Button Filters: Filters listings by camper type. 
+
+Technical Features 
+
+Advertisement Card: Each camper listing is displayed using a custom-designed advertisement card. 
+
+Pagination: The catalog page initially renders 4 listings. More listings can be loaded by clicking the "Load more" button. 
+
+Favorite Functionality: Users can add listings to their favorites by clicking a heart-shaped button on the advertisement card. The button color changes to indicate the favorite status. 
+
+State Persistence: The favorite status of listings is preserved even after the page is refreshed. 
+
+Modal Window: Clicking the "Show more" button on an advertisement card opens a modal window with detailed information about the camper. The modal window can be closed by clicking a close button, the backdrop, or pressing the Esc key. 
+
+Form Validation: The modal window includes a booking form with fields for name, email, booking date, and comment. The form validates input and ensures mandatory fields are filled before submission. 
+
+Pricing Display: Rental prices are displayed with a comma separator (e.g., 8000,00). 
+
+ 

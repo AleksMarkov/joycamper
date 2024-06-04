@@ -8,6 +8,7 @@ const CatalogPage = () => {
   const [cards, setCards] = useState([]);
   const [loading, setLoading] = useState(true);
   const [filteredCards, setFilteredCards] = useState([]);
+  const [filterApplied, setFilterApplied] = useState(false);
 
   useEffect(() => {
     fetch('https://665b72a0003609eda460e874.mockapi.io/api/adverts')
@@ -24,7 +25,6 @@ const CatalogPage = () => {
 
   const handleSearch = (filters) => {
     const filtered = cards.filter(card => {
-
       return (
         (!filters.acSelected || card.details.airConditioner === 1) &&
         (!filters.automaticSelected || card.transmission.toLowerCase() === 'automatic') &&
@@ -36,7 +36,10 @@ const CatalogPage = () => {
       );
     });
     setFilteredCards(filtered);
+    setFilterApplied(true);
   };
+
+  const cardsToDisplay = filterApplied ? filteredCards : cards;
 
   return (
     <Styled.ContainerCatalog>
@@ -47,7 +50,7 @@ const CatalogPage = () => {
         </Styled.MainContent>
         {!loading && (
           <Styled.SidebarContent>
-            <SidebarCatalog cards={filteredCards.length ? filteredCards : cards} />
+            <SidebarCatalog cards={cardsToDisplay} />
           </Styled.SidebarContent>
         )}
       </Styled.ContentWrapper>

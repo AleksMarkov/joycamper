@@ -11,13 +11,19 @@ const SidebarCatalog = ({ cards }) => {
 
   return (
     <Styled.SidebarContainer>
-      {cards.slice(0, visibleCount).map(card => (
-        <CamperCard key={card.id} card={card} />
-      ))}
-      {visibleCount < cards.length && (
-        <Styled.LoadMoreButton onClick={handleLoadMore}>
-          Load more
-        </Styled.LoadMoreButton>
+      {cards.length === 0 ? (
+        <Styled.NoResultsMessage>No results found</Styled.NoResultsMessage>
+      ) : (
+        <>
+          {cards.slice(0, visibleCount).map(card => (
+            <CamperCard key={card.id} card={card} />
+          ))}
+          {visibleCount < cards.length && (
+            <Styled.LoadMoreButton onClick={handleLoadMore}>
+              Load more
+            </Styled.LoadMoreButton>
+          )}
+        </>
       )}
     </Styled.SidebarContainer>
   );

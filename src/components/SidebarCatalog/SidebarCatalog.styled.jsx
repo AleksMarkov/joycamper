@@ -30,3 +30,10 @@ export const LoadMoreButton = styled.button`
     border: 1px solid var(--button);
   }
 `;
+
+export const NoResultsMessage = styled.div`
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--button);
+  margin-top: 20px;
+`;
