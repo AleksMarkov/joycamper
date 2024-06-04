@@ -18,11 +18,9 @@ export const ReviewsContainer = styled.div`
 `;
 
 export const ReviewItem = styled.div`
-  font-family: "Inter", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #475467;
-  // border-bottom: 1px solid #E0E0E0;
+  color: var(--text);
   padding-bottom: 24px;
 `;
 
@@ -39,21 +37,19 @@ export const Avatar = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 24px;
   line-height: 1.25;
-  color: #e44848;
-  background: #f2f4f7;
+  color: var(--button);
+  background: var(--block-features);
   margin-right: 16px;
 `;
 
 export const Stars = styled.div`
-font-family: "Inter", sans-serif;
 font-weight: 600;
 font-size: 18px;
 line-height: 1.33333;
-color: #101828;
+color: var(--main);
   display: flex;
   flex-direction: column;
 `;
@@ -72,15 +68,13 @@ export const Star = styled.img`
 
 export const ReviewerName = styled.p`
   margin: 0;
-  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 16px;
-  color: #101828;
+  color: var(--main);
 `;
 
 export const ReviewerRating = styled.p`
   margin: 0;
-  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 14px;
   color: #667085;
@@ -88,10 +82,9 @@ export const ReviewerRating = styled.p`
 
 export const Comment = styled.p`
   margin: 0;
-  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 14px;
-  color: #475467;
+  color: var(--text);
   line-height: 1.5;
 `;
 

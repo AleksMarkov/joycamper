@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import Icon from '../../images/MYSVG/close.svg';
+import Icon from '../../assets/MYSVG/close.svg';
 import { Opacity, Modalcont, ModalClose } from './Modal.styled';
 
 const Modal = ({ children, width, height, onClose}) => {

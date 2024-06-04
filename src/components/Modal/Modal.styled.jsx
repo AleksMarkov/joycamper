@@ -22,8 +22,7 @@ export const Modalcont = styled.div`
   align-items: center;
   min-height: 130px;
   border-radius: 20px;
-  // padding: 40px;
-  color: #101828;
+  color: var(--main);
   background-color: white;
   z-index: 10000; 
   width: ${({ $Width }) => $Width}px;

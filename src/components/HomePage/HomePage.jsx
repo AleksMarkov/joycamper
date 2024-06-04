@@ -1,6 +1,6 @@
 import React from 'react';
 import * as Styled from './HomePage.styled.jsx';
-import campingImage from '../../images/logoOutline.svg';  
+import campingImage from '../../assets/MYSVG/logoOutline.svg';  
 
 const HomePage = () => {
   return (

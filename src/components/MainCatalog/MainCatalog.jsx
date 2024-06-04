@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import * as Styled from './MainCatalog.styled';
-import { ReactComponent as Ac } from '../../images/MYSVG/AC.svg';
-import { ReactComponent as Transmission } from '../../images/MYSVG/transmission.svg';
-import { ReactComponent as Kitchen } from '../../images/MYSVG/kitchen.svg';
-import { ReactComponent as TV } from '../../images/MYSVG/TV.svg';
-import { ReactComponent as Shower } from '../../images/MYSVG/shower.svg';
-import { ReactComponent as Van } from '../../images/MYSVG/Van.svg';
-import { ReactComponent as Fully } from '../../images/MYSVG/Fully.svg';
-import { ReactComponent as Alcove } from '../../images/MYSVG/Alcove.svg';
-import Map from '../../images/MYSVG/Map.svg';
+import { ReactComponent as Ac } from '../../assets/MYSVG/AC.svg';
+import { ReactComponent as Transmission } from '../../assets/MYSVG/transmission.svg';
+import { ReactComponent as Kitchen } from '../../assets/MYSVG/kitchen.svg';
+import { ReactComponent as TV } from '../../assets/MYSVG/TV.svg';
+import { ReactComponent as Shower } from '../../assets/MYSVG/shower.svg';
+import { ReactComponent as Van } from '../../assets/MYSVG/Van.svg';
+import { ReactComponent as Fully } from '../../assets/MYSVG/Fully.svg';
+import { ReactComponent as Alcove } from '../../assets/MYSVG/Alcove.svg';
+import Map from '../../assets/MYSVG/Map.svg';
 
 const MainCatalog = ({ onSearch }) => {
   const [acSelected, setAcSelected] = useState(false);

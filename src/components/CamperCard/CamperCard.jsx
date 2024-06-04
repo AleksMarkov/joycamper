@@ -2,24 +2,24 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addInterest, removeInterest } from '../../redux/cards/interestsSlice';
 import * as Styled from './CamperCard.styled.jsx';
-import ShowMore from '../ShowMore/ShowMore'; // Import ShowMore component
-import Star from '../../images/MYSVG/star.svg';
-import Map from '../../images/MYSVG/Map.svg';
-import Users from '../../images/MYSVG/users.svg';
-import Transmission from '../../images/MYSVG/transmission.svg';
-import Engine from '../../images/MYSVG/engine.svg';
-import Kitchen from '../../images/MYSVG/kitchen.svg';
-import Beds from '../../images/MYSVG/beds.svg';
-import AC from '../../images/MYSVG/AC.svg';
-import TV from '../../images/MYSVG/TV.svg';
-import WC from '../../images/MYSVG/shower.svg';
-import HartOff from '../../images/MYSVG/hartOff.svg';
-import HartOn from '../../images/MYSVG/hartOn.svg';
+import ShowMore from '../ShowMore/ShowMore'; 
+import Star from '../../assets/MYSVG/star.svg';
+import Map from '../../assets/MYSVG/Map.svg';
+import Users from '../../assets/MYSVG/users.svg';
+import Transmission from '../../assets/MYSVG/transmission.svg';
+import Engine from '../../assets/MYSVG/engine.svg';
+import Kitchen from '../../assets/MYSVG/kitchen.svg';
+import Beds from '../../assets/MYSVG/beds.svg';
+import AC from '../../assets/MYSVG/AC.svg';
+import TV from '../../assets/MYSVG/TV.svg';
+import WC from '../../assets/MYSVG/shower.svg';
+import HartOff from '../../assets/MYSVG/hartOff.svg';
+import HartOn from '../../assets/MYSVG/hartOn.svg';
 
 const CamperCard = ({ card }) => {
   const dispatch = useDispatch();
   const interestingCards = useSelector(state => state.interests.interestingCards);
-  const [showModal, setShowModal] = useState(false); // State to control modal visibility
+  const [showModal, setShowModal] = useState(false); 
 
   const isInteresting = interestingCards.some(interestingCard => interestingCard.id === card.id);
 

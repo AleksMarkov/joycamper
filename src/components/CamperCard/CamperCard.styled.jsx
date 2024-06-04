@@ -47,11 +47,10 @@ export const TitleContainer = styled.div`
 `;
 
 export const Title = styled.div`
-  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 24px;
   line-height: 1.25;
-  color: #101828;
+  color: var(--main);
   width: 340px;
   white-space: nowrap;
   overflow: hidden;
@@ -60,11 +59,10 @@ export const Title = styled.div`
 
 export const Price = styled.div`
   width: 140px;
-  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 24px;
   line-height: 1.25;
-  color: #101828;
+  color: var(--main);
 `;
 
 export const IconWrapper = styled.div`
@@ -86,35 +84,32 @@ export const ReviewsContainer = styled.div`
 export const ReviewText = styled.div`
   width: 133px;
   height: 24px;
-  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   text-decoration: underline;
   text-decoration-skip-ink: none;
-  color: #101828;
+  color: var(--main);
 `;
 
 export const Location = styled.div`
   width: 350px;
   height: 24px;
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #101828;
+  color: var(--main);
 `;
 
 export const Description = styled.div`
   width: 525px;
   height: 24px;
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #475467;
+  color: var(--text);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -142,20 +137,17 @@ align-items: center;
 
 export const Feature = styled.div`
   border-radius: 100px;
-  // width: 126px;
   height: 44px;
   display: flex;
-  // gap: 4px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #F2F4F7;
-  font-family: "Inter", sans-serif;
+  background-color: var(--block-features);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.25;
   text-align: center;
-  color: #101828;
+  color: var(--main);
 `;
 
 export const ShowMoreButton = styled.button`
@@ -166,7 +158,7 @@ export const ShowMoreButton = styled.button`
   gap: 10px;
   width: 166px;
   height: 56px;
-  background: #e44848;
+  background: var(--button);
   border-radius: 200px;
   color: white;
   border: none;

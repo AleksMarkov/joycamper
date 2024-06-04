@@ -8,8 +8,7 @@ export const Card = styled.div`
   align-items: center;
   padding: 40px;
   padding-right: 20px;
-  // padding-left: 20px;
-  width: 984px;
+  width: 982px;
   height: 720px;
   background: #FFFFFF;
   border-radius: 20px;
@@ -56,19 +55,17 @@ export const TitleContainer = styled.div`
 `;
 
 export const Title = styled.div`
-  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 24px;
   line-height: 1.25;
-  color: #101828;
+  color: var(--main);
 `;
 
 export const Price = styled.div`
-  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 24px;
   line-height: 1.25;
-  color: #101828;
+  color: var(--main);
 `;
 
 export const ReviewsContainer = styled.div`
@@ -76,11 +73,10 @@ export const ReviewsContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  color: #101828;
+  color: var(--main);
 `;
 
 export const ReviewText = styled.div`
@@ -95,11 +91,10 @@ export const Location = styled.div`
 `;
 
 export const Description = styled.div`
-  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  color: #475467;
+  color: var(--text);
 `;
 
 export const ButtomContainer = styled.div`
@@ -110,7 +105,7 @@ export const ButtomContainer = styled.div`
 `;
 
 export const TabButton = styled.button`
-  font-family: "Inter", sans-serif;
+
   font-weight: 600;
   font-size: 20px;
   line-height: 1.2;
@@ -120,7 +115,7 @@ export const TabButton = styled.button`
   padding-top: 16px;
   padding-bottom: 24px;
   margin-right: 24px;
-  border-bottom: ${props => (props.active ? '6px solid #E44848' : 'none')};
+  border-bottom: ${props => (props.active ? '6px solid var(--button)' : 'none')};
 
   &:focus {
     outline: none;

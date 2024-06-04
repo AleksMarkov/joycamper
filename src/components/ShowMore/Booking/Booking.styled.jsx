@@ -6,51 +6,52 @@ export const Container = styled.div`
   padding: 24px;
   width: 400px;
   gap: 14px;
-  height: 532px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 `;
 
 export const Titles = styled.div`
-font-family: "Inter", sans-serif;
-font-weight: 600;
-font-size: 20px;
-line-height: 1.2;
-color: #101828;
-// margin-bottom: 8px;
+
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--main);
 `;
 
 export const SubTitle = styled.div`
-  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  color: #475467;
+  color: var(--text);
   margin-bottom: 10px;
 `;
 
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 100%;
   gap: 16px;
 `;
 
 export const Input = styled.input`
-border-radius: 10px;
-padding: 0px 18px;
-width: 368px;
-height: 56px;
-  background-color: #f7f7f7;
+  border-radius: 10px;
+  padding: 0px 18px;
+  width: 352px;
+  height: 56px;
+  background-color: var(--block-features);
   border: 1px solid #e5e7eb;
-  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  color: #101828;
-  background: url(${({ icon }) => icon}) no-repeat 362px center / 20px 20px, #f7f7f7;
+  color: var(--main);
+  background: url(${({ icon }) => icon}) no-repeat 362px center / 20px 20px, var(--block-features);
+
   &::placeholder {
     color: rgba(16, 24, 40, 0.6);
+  }
+
+  &.invalid {
+    border-color: red;
   }
 `;
 
@@ -69,38 +70,45 @@ export const Icon = styled.img`
 
 export const TextArea = styled.textarea`
   padding: 18px 18px;
-  width: 368px;
+  width: 352px;
   height: 82px;
   background: #f9fafb;
   border: 1px solid #e5e7eb;
   border-radius: 10px;
-  font-family: "Inter", sans-serif;
+
   font-weight: 400;
   font-size: 16px;
-  color: #101828;
+  color: var(--main);
   resize: none;
+
   &::placeholder {
     color: #667085;
   }
 `;
 
 export const Button = styled.button`
-border-radius: 200px;
-margin-top: 24px;
-padding: 16px 60px;
-width: 160px;
-height: 56px;
-//   padding: 16px 24px;
-background-color: #e44848;
-font-family: "Inter", sans-serif;
-font-weight: 500;
-font-size: 16px;
-line-height: 1.5;
-letter-spacing: -0.01em;
-color: #fff;
+  border-radius: 200px;
+  margin-top: 24px;
+  padding: 16px 60px;
+  width: 160px;
+  height: 56px;
+  background-color: var(--button);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: #fff;
   border: none;
   cursor: pointer;
+
   &:hover {
     background-color: #d43737;
   }
+`;
+
+export const Error = styled.div`
+  font-size: 12px;
+  color: var(--button);
+  margin-top: -12px;
+  margin-bottom: 8px;
 `;

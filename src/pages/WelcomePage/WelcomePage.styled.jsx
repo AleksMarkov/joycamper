@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const Home = styled.div`
-    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     height: 100vh;
+    justify-content: space-between;
     overflow: hidden;
     box-sizing: border-box;
     background-color: #f9f9f9;
@@ -13,14 +13,12 @@ export const Home = styled.div`
 export const ButtonContainer = styled.div`
     display: flex;
     justify-content: center;
-    // gap: 300px;
-    background-color: #e44848;
-    // padding: 40px;
+    background-color: var(--button);
 `;
 
 export const ButtonLeft = styled.button`
     padding: 20px 40px;
-    background-color: #e44848;
+    background-color: var(--button);
     color: #f9f9f9;
     border: 4px solid;
     border-top: none;
@@ -34,13 +32,13 @@ export const ButtonLeft = styled.button`
     &:hover {
     background-color: #f9f9f9;
 
-        color: #e44848;
+        color: var(--button);
   }
     }
 `;
 export const ButtonRight = styled.button`
     padding: 20px 40px;
-    background-color: #e44848;
+    background-color: var(--button);
     color: white;
     border: solid;
     border: 4px solid;
@@ -54,7 +52,7 @@ export const ButtonRight = styled.button`
     &:hover {
         background-color: #f9f9f9;
     
-            color: #e44848;
+            color: var(--button);
       }
     }
 `;

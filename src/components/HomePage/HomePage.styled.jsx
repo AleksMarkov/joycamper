@@ -5,7 +5,6 @@ export const MainSection = styled.section`
     flex-direction: row;
     justify-content: center
     flex-grow: 1;
-    // text-align: left;
     gap: 50px;
     padding: 100px;
     padding-top: 50px;
@@ -41,8 +40,7 @@ export const Heading = styled.div`
     font-size: 60px;
     font-weight: 600;
     margin-top: 120px;
-    margin-bottom: -20px;
-    color: #e44848;
+    color: var(--button);
     padding-right: 30px;
 `;
 

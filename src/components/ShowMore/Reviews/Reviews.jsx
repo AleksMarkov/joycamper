@@ -1,8 +1,8 @@
 import React from 'react';
 import * as Styled from './Reviews.styled.jsx';
 import Booking from '../Booking/Booking.jsx';
-import StarYes from '../../../images/MYSVG/star.svg';
-import StarNo from '../../../images/MYSVG/starno.svg';
+import StarYes from '../../../assets/MYSVG/star.svg';
+import StarNo from '../../../assets/MYSVG/starno.svg';
 
 const getFirstLetter = (name) => {
   if (!name) return '';

@@ -3,8 +3,8 @@ import Modal from '../Modal/Modal';
 import * as Styled from './ShowMore.styled.jsx';
 import Features from './Features/Features.jsx';
 import Reviews from './Reviews/Reviews.jsx';
-import Star from '../../images/MYSVG/star.svg';
-import Map from '../../images/MYSVG/Map.svg';
+import Star from '../../assets/MYSVG/star.svg';
+import Map from '../../assets/MYSVG/Map.svg';
 
 const ShowMore = ({ card, showModal }) => {
   const [modalWidth, setModalWidth] = useState(400);
@@ -13,9 +13,9 @@ const ShowMore = ({ card, showModal }) => {
   useEffect(() => {
     const updateModalWidth = () => {
       if (window.innerWidth < 768) {
-        setModalWidth(982);
+        setModalWidth(984);
       } else {
-        setModalWidth(982);
+        setModalWidth(984);
       }
     };
     updateModalWidth();

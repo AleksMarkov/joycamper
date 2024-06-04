@@ -14,12 +14,11 @@ export const LoadMoreButton = styled.button`
   border-radius: 200px;
   width: 145px;
   height: 56px;
-  font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.01em;
-  color: #101828;
+  color: var(--main);
   background-color: white;
   cursor: pointer;
   margin-top: 20px;
@@ -28,6 +27,6 @@ export const LoadMoreButton = styled.button`
   margin-left: 370px; 
 
   &:hover {
-    border: 1px solid #e44848;
+    border: 1px solid var(--button);
   }
 `;

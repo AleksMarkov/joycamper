@@ -19,7 +19,6 @@ export const LocationSection = styled.div`
 `;
 
 export const SupportingText = styled.div`
-  font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -40,19 +39,18 @@ export const Input = styled.input`
   width: 100%;
   height: 56px;
   font-size: 16px;
-  background-color: #f7f7f7;
-  color: #101828; 
-  background: url(${({ icon }) => icon}) no-repeat 16px center / 24px 24px, #f7f7f7;
+  background-color: var(--block-features);
+  color: var(--main); 
+  background: url(${({ icon }) => icon}) no-repeat 16px center / 24px 24px, var(--block-features);
   padding-left: 50px;
   &:hover,
   &:focus {
-    color: #101828;
+    color: var(--main);
     outline: none;
   }
 `;
 
 export const FiltersTitle = styled.div`
-  font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -76,11 +74,10 @@ export const ContainerVehicle = styled.div`
 `;
 
 export const FilterTitle = styled.div`
-  font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 20px;
   line-height: 1.2;
-  color: #101828;
+  color: var(--main);
   margin-bottom: 24px;
 `;
 
@@ -99,7 +96,7 @@ export const Filters = styled.div`
 `;
 
 export const FilterButton = styled.button`
-  border: 1px solid ${({ isselected }) => (isselected ? '#e44848' : 'rgba(16, 24, 40, 0.2)')};
+  border: 1px solid ${({ isselected }) => (isselected ? 'var(--button)' : 'rgba(16, 24, 40, 0.2)')};
   border-radius: 10px;
   padding: 17px 27px;
   width: 114px;
@@ -123,12 +120,11 @@ export const IconWrapper = styled.div`
 `;
 
 export const ButtonText = styled.div`
-  font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.25;
   text-align: center;
-  color: #101828;
+  color: var(--main);
   margin-top: 8px;
 `;
 
@@ -140,7 +136,7 @@ export const Button = styled.button`
   gap: 10px;
   width: 173px;
   height: 56px;
-  background-color: #e44848;
+  background-color: var(--button);
   border-radius: 200px;
   color: white;
   border: none;

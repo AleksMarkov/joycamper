@@ -1,30 +1,28 @@
 import React from 'react';
 import * as Styled from './Features.styled.jsx';
 import Booking from '../Booking/Booking.jsx';
-import Users from '../../../images/MYSVG/users.svg';
-import Transmission from '../../../images/MYSVG/transmission.svg';
-import Engine from '../../../images/MYSVG/engine.svg';
-import Kitchen from '../../../images/MYSVG/kitchen.svg';
-import Beds from '../../../images/MYSVG/beds.svg';
-import AC from '../../../images/MYSVG/AC.svg';
-import Conditioner from '../../../images/MYSVG/AirConditioner.svg';
-import TV from '../../../images/MYSVG/TV.svg';
-import WC from '../../../images/MYSVG/Toilet.svg';
-import Shower from '../../../images/MYSVG/shower.svg';
-import CD from '../../../images/MYSVG/CD.svg';
-import Radio from '../../../images/MYSVG/Radio.svg';
-import Hob from '../../../images/MYSVG/hob.svg';
-import Freezer from '../../../images/MYSVG/Freezer.svg';
-import Microwave from '../../../images/MYSVG/Microwave.svg';
+import Users from '../../../assets/MYSVG/users.svg';
+import Transmission from '../../../assets/MYSVG/transmission.svg';
+import Engine from '../../../assets/MYSVG/engine.svg';
+import Kitchen from '../../../assets/MYSVG/kitchen.svg';
+import Beds from '../../../assets/MYSVG/beds.svg';
+import AC from '../../../assets/MYSVG/AC.svg';
+import Conditioner from '../../../assets/MYSVG/AirConditioner.svg';
+import TV from '../../../assets/MYSVG/TV.svg';
+import WC from '../../../assets/MYSVG/Toilet.svg';
+import Shower from '../../../assets/MYSVG/shower.svg';
+import CD from '../../../assets/MYSVG/CD.svg';
+import Radio from '../../../assets/MYSVG/Radio.svg';
+import Hob from '../../../assets/MYSVG/hob.svg';
+import Freezer from '../../../assets/MYSVG/Freezer.svg';
+import Microwave from '../../../assets/MYSVG/Microwave.svg';
 
 const Features = ({ card }) => {
 
-  // Helper function to format string
   const capitalizeString = (str) => {
     return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
   };
 
-  // Helper function to add space between number and unit
   const addSpaceBetweenNumberAndUnit = (str) => {
     return str.replace(/(\d+)([a-zA-Z]+)/, '$1 $2');
   };
