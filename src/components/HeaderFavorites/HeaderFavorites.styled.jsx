@@ -16,9 +16,28 @@ export const ButtonContainer = styled.div`
   padding-left: 146px;
 `;
 
-export const Button = styled.button`
-border-left: 2px solid white;
-border-right: 2px solid white;
+export const ButtonLeft = styled.button`
+border-left: 4px solid white;
+border-right: 4px solid white;
+border-top: none;
+border-bottom: none;
+padding: 20px 50px;
+background-color: #e44848;
+color: white;
+cursor: pointer;
+font-size: 24px;
+font-weight: 700;
+transition: background-color 0.3s ease;
+
+&:hover {
+  color: #e44848;
+  background-color: white;
+}
+`;
+
+export const ButtonRight = styled.button`
+border-left: none;
+border-right: 4px solid white;
 border-top: none;
 border-bottom: none;
 padding: 20px 50px;

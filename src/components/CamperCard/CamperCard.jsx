@@ -58,45 +58,61 @@ const CamperCard = ({ card }) => {
           <Styled.Description>{card.description}</Styled.Description>
           <Styled.FeaturesContainer>
             <Styled.Feature>
-              <img src={Users} alt="Adalts" width="20" height="20" />
+            <Styled.Item>
+              <img src={Users} alt="Adults" width="20" height="20" />
               {card.adults} adults
+            </Styled.Item>
             </Styled.Feature>
             <Styled.Feature>
+            <Styled.Item>
               <img src={Transmission} alt="Transmission" width="20" height="20" />
               {card.transmission}
+            </Styled.Item>
             </Styled.Feature>
             <Styled.Feature>
+            <Styled.Item>
               <img src={Engine} alt="Engine" width="20" height="20" />
               {card.engine}
+              </Styled.Item>
             </Styled.Feature>
             {card.details.kitchen === 1 && (
               <Styled.Feature>
+                 <Styled.Item>
                 <img src={Kitchen} alt="Kitchen" width="20" height="20" />
                 Kitchen
+                </Styled.Item>
               </Styled.Feature>
             )}
             {card.details.beds > 0 && (
               <Styled.Feature>
+                 <Styled.Item>
                 <img src={Beds} alt="Beds" width="20" height="20" />
                 {card.details.beds} Beds
+                </Styled.Item>
               </Styled.Feature>
             )}
             {card.details.TV > 0 && (
               <Styled.Feature>
+                 <Styled.Item>
                 <img src={TV} alt="TV" width="20" height="20" />
                 {card.details.TV} TV
+                </Styled.Item>
               </Styled.Feature>
             )}
             {card.details.bathroom > 0 && (
               <Styled.Feature>
+                 <Styled.Item>
                 <img src={WC} alt="WC" width="20" height="20" />
                 {card.details.bathroom} WC
+                </Styled.Item>
               </Styled.Feature>
             )}
             {card.details.airConditioner === 1 && (
               <Styled.Feature>
+                 <Styled.Item>
                 <img src={AC} alt="AC" width="20" height="20" />
                 AC
+                </Styled.Item>
               </Styled.Feature>
             )}
           </Styled.FeaturesContainer>

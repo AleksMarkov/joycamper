@@ -7,10 +7,10 @@ const HeaderFavorites = () => {
     <Styled.TopBar>
       <Styled.ButtonContainer>
         <Link to="/">
-          <Styled.Button>Home</Styled.Button>
+          <Styled.ButtonLeft>Home</Styled.ButtonLeft>
         </Link>
         <Link to="/catalog">
-          <Styled.Button>Catalogue</Styled.Button>
+          <Styled.ButtonRight>Catalogue</Styled.ButtonRight>
         </Link>
       </Styled.ButtonContainer>
     </Styled.TopBar>

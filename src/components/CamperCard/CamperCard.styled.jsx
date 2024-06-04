@@ -132,12 +132,20 @@ export const FeaturesContainer = styled.div`
   margin-bottom: 64px;
 `;
 
+export const Item = styled.div`
+display: flex;
+flex-direction: row;
+align-items: center;
+ padding: 0px 20px;
+ gap: 4px;
+`;
+
 export const Feature = styled.div`
   border-radius: 100px;
-  width: 126px;
+  // width: 126px;
   height: 44px;
   display: flex;
-  gap: 4px;
+  // gap: 4px;
   flex-direction: row;
   justify-content: center;
   align-items: center;

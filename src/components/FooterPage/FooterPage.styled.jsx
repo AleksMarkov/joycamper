@@ -4,7 +4,7 @@ export const Footer = styled.footer`
     background-color: #f9f9f9;
     color: #333;
     text-align: center;
-    padding: 20px;
+    padding: 40px;
     overflow: hidden;
 `;
 

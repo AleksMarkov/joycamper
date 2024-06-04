@@ -51,8 +51,6 @@ export const Input = styled.input`
   }
 `;
 
-
-
 export const FiltersTitle = styled.div`
   font-family: "Inter", sans-serif;
   font-weight: 500;

@@ -10,10 +10,10 @@ const WelcomePage = () => {
       <HomePage />
       <Styled.ButtonContainer>
         <Link to="/catalog">
-          <Styled.Button>Catalog Campers</Styled.Button>
+          <Styled.ButtonLeft>Catalogue</Styled.ButtonLeft>
         </Link>
         <Link to="/favorites">
-          <Styled.Button>My Favorite Campers</Styled.Button>
+          <Styled.ButtonRight>Favorites</Styled.ButtonRight>
         </Link>
       </Styled.ButtonContainer>
       <FooterPage />

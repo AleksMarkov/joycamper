@@ -7,10 +7,10 @@ const HeaderCatalog = () => {
     <Styled.TopBar>
       <Styled.ButtonContainer>
       <Link to="/">
-        <Styled.Button>Home</Styled.Button>
+        <Styled.ButtonLeft>Home</Styled.ButtonLeft>
       </Link>
       <Link to="/favorites">
-        <Styled.Button>Favorites</Styled.Button>
+        <Styled.ButtonRight>Favorites</Styled.ButtonRight>
       </Link>
       </Styled.ButtonContainer>
     </Styled.TopBar>

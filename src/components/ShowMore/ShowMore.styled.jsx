@@ -4,20 +4,30 @@ export const Card = styled.div`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 24px;
+  justify-content: flex-start;
+  align-items: center;
   padding: 40px;
+  padding-right: 20px;
+  // padding-left: 20px;
   width: 984px;
   height: 720px;
   background: #FFFFFF;
   border-radius: 20px;
 `;
 
+export const ScrollContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+`;
+
 export const ImageContainer = styled.div`
   display: flex;
   gap: 16px;
   overflow-x: auto;
-  padding-bottom: 16px;
 `;
 
 export const Image = styled.img`
@@ -92,10 +102,11 @@ export const Description = styled.div`
   color: #475467;
 `;
 
-export const ButtonContainer = styled.div`
+export const ButtomContainer = styled.div`
   display: flex;
   width: 100%;
   border-bottom: 1px solid #E0E0E0;
+  margin-bottom: 32px;
 `;
 
 export const TabButton = styled.button`
@@ -106,9 +117,10 @@ export const TabButton = styled.button`
   border: none;
   background: none;
   cursor: pointer;
-  padding-bottom: 8px;
+  padding-top: 16px;
+  padding-bottom: 24px;
   margin-right: 24px;
-  border-bottom: ${props => (props.active ? '4px solid #E44848' : 'none')};
+  border-bottom: ${props => (props.active ? '6px solid #E44848' : 'none')};
 
   &:focus {
     outline: none;

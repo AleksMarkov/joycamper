@@ -41,15 +41,15 @@ export const Input = styled.input`
   height: 56px;
   font-size: 16px;
   background-color: #f7f7f7;
-  color: rgba(16, 24, 40, 0.6);
+  color: #101828; 
   background: url(${({ icon }) => icon}) no-repeat 16px center / 24px 24px, #f7f7f7;
   padding-left: 50px; 
-  &:hover {
+  &:hover,
+  &:focus {
     color: #101828;
     outline: none;
   }
 `;
-
 
 export const FiltersTitle = styled.div`
   font-family: "Inter", sans-serif;
