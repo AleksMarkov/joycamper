@@ -8,7 +8,8 @@ export const Card = styled.div`
   align-items: center;
   padding: 40px;
   padding-right: 20px;
-  width: 982px;
+  width: 100%;
+  max-width: 984px;
   height: 720px;
   background: #FFFFFF;
   border-radius: 20px;
@@ -50,8 +51,7 @@ export const TitleContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  width: 902px;
-  height: 110px;
+  width: 100%;
 `;
 
 export const Title = styled.div`
@@ -105,7 +105,6 @@ export const ButtomContainer = styled.div`
 `;
 
 export const TabButton = styled.button`
-
   font-weight: 600;
   font-size: 20px;
   line-height: 1.2;

@@ -7,6 +7,12 @@ export const SidebarContainer = styled.div`
   gap: 24px;
   width: 400px; 
   padding-left: 64px;
+
+  @media (max-width: 1440px) {
+    width: 100%;
+    padding-left: 0;
+    align-items: center;
+  }
 `;
 
 export const LoadMoreButton = styled.button`
@@ -29,6 +35,16 @@ export const LoadMoreButton = styled.button`
   &:hover {
     border: 1px solid var(--button);
   }
+
+  @media (max-width: 779px) {
+    margin-left: 0;
+  }
+
+  @media (max-width: 369px) {
+    width: 120px;
+    height: 48px;
+    font-size: 14px;
+  }
 `;
 
 export const NoResultsMessage = styled.div`
@@ -36,4 +52,12 @@ export const NoResultsMessage = styled.div`
   font-weight: 600;
   color: var(--button);
   margin-top: 20px;
+
+  @media (max-width: 779px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 369px) {
+    font-size: 20px;
+  }
 `;

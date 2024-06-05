@@ -7,13 +7,21 @@ export const TopBar = styled.div`
   width: 100%;
   background-color: var(--button);
   margin-bottom: 8px;
+
+  @media (max-width: 779px) {
+    align-items: center;
+  }
 `;
 
 export const ButtonContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   padding-left: 146px;
-  
+
+  @media (max-width: 779px) {
+    justify-content: center;
+    padding-left: 0;
+  }
 `;
 
 export const ButtonLeft = styled.button`      
@@ -30,8 +38,14 @@ export const ButtonLeft = styled.button`
   transition: background-color 0.3s ease;
 
   &:hover {
-  color: var(--button);
-  background-color: white;
+    color: var(--button);
+    background-color: white;
+  }
+
+  @media (max-width: 779px) {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
 `;
 
 export const ButtonRight = styled.button`      
@@ -48,6 +62,12 @@ export const ButtonRight = styled.button`
   transition: background-color 0.3s ease;
 
   &:hover {
-  color: var(--button);
-  background-color: white;
+    color: var(--button);
+    background-color: white;
+  }
+
+  @media (max-width: 779px) {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
 `;

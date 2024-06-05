@@ -7,13 +7,13 @@ import Star from '../../assets/MYSVG/star.svg';
 import Map from '../../assets/MYSVG/Map.svg';
 
 const ShowMore = ({ card, showModal }) => {
-  const [modalWidth, setModalWidth] = useState(400);
+  const [modalWidth, setModalWidth] = useState(984);
   const [activeTab, setActiveTab] = useState('Features');
 
   useEffect(() => {
     const updateModalWidth = () => {
-      if (window.innerWidth < 768) {
-        setModalWidth(984);
+      if (window.innerWidth < 984) {
+        setModalWidth(window.innerWidth * 0.9); // Set modal width to 90% of window width if window width is smaller than modal width
       } else {
         setModalWidth(984);
       }
@@ -53,16 +53,16 @@ const ShowMore = ({ card, showModal }) => {
             </Styled.ImageContainer>
             <Styled.Description>{card.description}</Styled.Description>
           </Styled.InfoContainer>
-        <Styled.ButtomContainer>
-          <Styled.TabButton active={activeTab === 'Features'} onClick={() => setActiveTab('Features')}>
-            Features
-          </Styled.TabButton>
-          <Styled.TabButton active={activeTab === 'Reviews'} onClick={() => setActiveTab('Reviews')}>
-            Reviews
-          </Styled.TabButton>
-        </Styled.ButtomContainer>
-        {activeTab === 'Features' && <Features card={card} />}
-        {activeTab === 'Reviews' && <Reviews card={card} />}
+          <Styled.ButtomContainer>
+            <Styled.TabButton active={activeTab === 'Features'} onClick={() => setActiveTab('Features')}>
+              Features
+            </Styled.TabButton>
+            <Styled.TabButton active={activeTab === 'Reviews'} onClick={() => setActiveTab('Reviews')}>
+              Reviews
+            </Styled.TabButton>
+          </Styled.ButtomContainer>
+          {activeTab === 'Features' && <Features card={card} />}
+          {activeTab === 'Reviews' && <Reviews card={card} />}
         </Styled.ScrollContainer>
       </Styled.Card>
     </Modal>

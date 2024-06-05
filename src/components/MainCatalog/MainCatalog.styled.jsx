@@ -8,6 +8,12 @@ export const Container = styled.div`
   position: relative;
   width: 360px;
   box-sizing: border-box;
+
+  @media (max-width: 779px) {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 16px;
+  }
 `;
 
 export const LocationSection = styled.div`
@@ -16,6 +22,10 @@ export const LocationSection = styled.div`
   width: 360px;
   height: 88px;
   gap: 8px;
+
+  @media (max-width: 779px) {
+    width: 100%;
+  }
 `;
 
 export const SupportingText = styled.div`
@@ -23,6 +33,10 @@ export const SupportingText = styled.div`
   font-size: 16px;
   line-height: 1.5;
   color: rgba(16, 24, 40, 0.6);
+
+  @media (max-width: 779px) {
+    font-size: 14px;
+  }
 `;
 
 export const InputForm = styled.div`
@@ -31,6 +45,10 @@ export const InputForm = styled.div`
   width: 360px;
   height: 56px;
   display: flex;
+
+  @media (max-width: 779px) {
+    width: 100%;
+  }
 `;
 
 export const Input = styled.input`
@@ -48,6 +66,12 @@ export const Input = styled.input`
     color: var(--main);
     outline: none;
   }
+
+  @media (max-width: 779px) {
+    font-size: 14px;
+    height: 48px;
+    padding-left: 40px;
+  }
 `;
 
 export const FiltersTitle = styled.div`
@@ -57,6 +81,12 @@ export const FiltersTitle = styled.div`
   color: rgba(16, 24, 40, 0.6);
   margin-top: 32px;
   margin-bottom: 14px;
+
+  @media (max-width: 779px) {
+    font-size: 14px;
+    margin-top: 24px;
+    margin-bottom: 10px;
+  }
 `;
 
 export const FiltersSection = styled.div`
@@ -79,6 +109,11 @@ export const FilterTitle = styled.div`
   line-height: 1.2;
   color: var(--main);
   margin-bottom: 24px;
+
+  @media (max-width: 779px) {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
 `;
 
 export const Divider = styled.div`
@@ -111,6 +146,18 @@ export const FilterButton = styled.button`
   &:hover {
     background-color: #fdecec;
   }
+
+  @media (max-width: 779px) {
+    width: 100px;
+    height: 80px;
+    font-size: 14px;
+  }
+
+  @media (max-width: 369px) {
+    width: 80px;
+    height: 60px;
+    font-size: 12px;
+  }
 `;
 
 export const IconWrapper = styled.div`
@@ -126,6 +173,14 @@ export const ButtonText = styled.div`
   text-align: center;
   color: var(--main);
   margin-top: 8px;
+
+  @media (max-width: 779px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 369px) {
+    font-size: 12px;
+  }
 `;
 
 export const Button = styled.button`
@@ -146,5 +201,18 @@ export const Button = styled.button`
   &:hover {
     background-color: #d84343;
   }
-`;
 
+  @media (max-width: 779px) {
+    width: 150px;
+    height: 48px;
+    font-size: 14px;
+    padding: 14px 50px;
+  }
+
+  @media (max-width: 369px) {
+    width: 130px;
+    height: 40px;
+    font-size: 12px;
+    padding: 12px 40px;
+  }
+`;

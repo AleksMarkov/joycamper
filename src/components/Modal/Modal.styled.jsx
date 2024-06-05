@@ -26,6 +26,7 @@ export const Modalcont = styled.div`
   background-color: white;
   z-index: 10000; 
   width: ${({ $Width }) => $Width}px;
+  max-width: 984px;
 `;
 
 export const ModalClose = styled.div`
@@ -36,5 +37,4 @@ export const ModalClose = styled.div`
   background-color: transparent;
   padding: 0;
   cursor: pointer;
-  }
 `;
