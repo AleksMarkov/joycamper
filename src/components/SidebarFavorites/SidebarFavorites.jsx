@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import CamperCard from 'components/CamperCard/CamperCard';
-import * as Styled from './SidebarFavorites.styled';
+import {
+  Container,
+  NotfoundMessage,
+  EmptyMessage,
+  Highlight,
+  LoadMoreButton
+} from './SidebarFavorites.styled';
 
 const SidebarFavorites = () => {
   const interestingCards = useSelector(state => state.interests.interestingCards);
@@ -13,26 +19,26 @@ const SidebarFavorites = () => {
   };
 
   return (
-    <Styled.Container>
+    <Container>
       {filteredCards.length > 0 ? (
         filteredCards.slice(0, visibleCount).map(card => (
           <CamperCard key={card.id} card={card} />
         ))
       ) : interestingCards.length > 0 ? (
-        <Styled.NotfoundMessage>
+        <NotfoundMessage>
           No results found
-        </Styled.NotfoundMessage>
+        </NotfoundMessage>
       ) : (
-        <Styled.EmptyMessage>
-          This page is for chosen campers. Please go to the <Styled.Highlight>Catalog Campers</Styled.Highlight> and choose the ones that interest you.
-        </Styled.EmptyMessage>
+        <EmptyMessage>
+          This page is for chosen campers. Please go to the <Highlight>Catalog Campers</Highlight> and choose the ones that interest you.
+        </EmptyMessage>
       )}
       {visibleCount < filteredCards.length && (
-        <Styled.LoadMoreButton onClick={handleLoadMore}>
+        <LoadMoreButton onClick={handleLoadMore}>
           Load more
-        </Styled.LoadMoreButton>
+        </LoadMoreButton>
       )}
-    </Styled.Container>
+    </Container>
   );
 };
 

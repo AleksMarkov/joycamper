@@ -1,20 +1,26 @@
 import React from 'react';
-import * as Styled from './HomePage.styled.jsx';
 import campingImage from '../../assets/MYSVG/logoOutline.svg';  
+import {
+  MainSection,
+  ImageContainer,
+  ContentContainer,
+  Heading,
+  Text
+} from './HomePage.styled.jsx';
 
 const HomePage = () => {
   return (
-      <Styled.MainSection>
-        <Styled.ImageContainer>
-          <img src={campingImage} alt="Camping" /> 
-        </Styled.ImageContainer>
-        <Styled.ContentContainer>
-          <Styled.Heading>JoyCamper!</Styled.Heading>
-          <Styled.Text>
+    <MainSection>
+      <ImageContainer>
+        <img src={campingImage} alt="Camping" /> 
+      </ImageContainer>
+      <ContentContainer>
+        <Heading>JoyCamper!</Heading>
+        <Text>
           <em>Journey with Joy</em>
-          </Styled.Text>
-        </Styled.ContentContainer>
-      </Styled.MainSection>
+        </Text>
+      </ContentContainer>
+    </MainSection>
   );
 };
 

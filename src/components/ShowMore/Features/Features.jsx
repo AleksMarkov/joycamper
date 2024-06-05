@@ -1,5 +1,14 @@
 import React from 'react';
-import * as Styled from './Features.styled.jsx';
+import { 
+  InfoContainer, 
+  FeaturesContainer, 
+  ItemContainer, 
+  Feature, 
+  Item, 
+  ParamContainer, 
+  Title, 
+  Param 
+} from './Features.styled.jsx';
 import Booking from '../Booking/Booking.jsx';
 import Users from '../../../assets/MYSVG/users.svg';
 import Transmission from '../../../assets/MYSVG/transmission.svg';
@@ -28,148 +37,148 @@ const Features = ({ card }) => {
   };
 
   return (
-    <Styled.InfoContainer>
-      <Styled.FeaturesContainer>
-        <Styled.ItemContainer>
-          <Styled.Feature>
-            <Styled.Item>
-              <img src={Users} alt="Adalts" width="20" height="20" />
+    <InfoContainer>
+      <FeaturesContainer>
+        <ItemContainer>
+          <Feature>
+            <Item>
+              <img src={Users} alt="Adults" width="20" height="20" />
               {card.adults} adults
-            </Styled.Item>
-          </Styled.Feature>
-          <Styled.Feature>
-            <Styled.Item>
+            </Item>
+          </Feature>
+          <Feature>
+            <Item>
               <img src={Transmission} alt="Transmission" width="20" height="20" />
               {card.transmission}
-            </Styled.Item>
-          </Styled.Feature>
+            </Item>
+          </Feature>
           {card.details.airConditioner === 1 && (
-            <Styled.Feature>
-              <Styled.Item>
+            <Feature>
+              <Item>
                 <img src={AC} alt="AC" width="20" height="20" />
                 AC
-              </Styled.Item>
-            </Styled.Feature>
+              </Item>
+            </Feature>
           )}
-          <Styled.Feature>
-            <Styled.Item>
+          <Feature>
+            <Item>
               <img src={Engine} alt="Engine" width="20" height="20" />
               {card.engine}
-            </Styled.Item>
-          </Styled.Feature>
+            </Item>
+          </Feature>
           {card.details.kitchen === 1 && (
-            <Styled.Feature>
-              <Styled.Item>
+            <Feature>
+              <Item>
                 <img src={Kitchen} alt="Kitchen" width="20" height="20" />
                 Kitchen
-              </Styled.Item>
-            </Styled.Feature>
+              </Item>
+            </Feature>
           )}
           {card.details.airConditioner > 0 && (
-            <Styled.Feature>
-              <Styled.Item>
+            <Feature>
+              <Item>
                 <img src={Conditioner} alt="AC" width="20" height="20" />
                 {card.details.airConditioner} air conditioner
-              </Styled.Item>
-            </Styled.Feature>
+              </Item>
+            </Feature>
           )}
           {card.details.beds > 0 && (
-            <Styled.Feature>
-              <Styled.Item>
+            <Feature>
+              <Item>
                 <img src={Beds} alt="Beds" width="20" height="20" />
                 {card.details.beds} Beds
-              </Styled.Item>
-            </Styled.Feature>
+              </Item>
+            </Feature>
           )}
           {card.details.TV > 0 && (
-            <Styled.Feature>
-              <Styled.Item>
+            <Feature>
+              <Item>
                 <img src={TV} alt="TV" width="20" height="20" />
                 TV
-              </Styled.Item>
-            </Styled.Feature>
+              </Item>
+            </Feature>
           )}
           {card.details.bathroom > 0 && (
-            <Styled.Feature>
-              <Styled.Item>
+            <Feature>
+              <Item>
                 <img src={WC} alt="WC" width="20" height="20" />
                 WC
-              </Styled.Item>
-            </Styled.Feature>
+              </Item>
+            </Feature>
           )}
           {card.details.shower > 0 && (
-            <Styled.Feature>
-              <Styled.Item>
+            <Feature>
+              <Item>
                 <img src={Shower} alt="Shower" width="20" height="20" />
                 Shower
-              </Styled.Item>
-            </Styled.Feature>
+              </Item>
+            </Feature>
           )}
           {card.details.CD > 0 && (
-            <Styled.Feature>
-              <Styled.Item>
+            <Feature>
+              <Item>
                 <img src={CD} alt="CD" width="20" height="20" />
                 CD
-              </Styled.Item>
-            </Styled.Feature>
+              </Item>
+            </Feature>
           )}
           {card.details.radio > 0 && (
-            <Styled.Feature>
-              <Styled.Item>
+            <Feature>
+              <Item>
                 <img src={Radio} alt="radio" width="20" height="20" />
                 Radio
-              </Styled.Item>
-            </Styled.Feature>
+              </Item>
+            </Feature>
           )}
           {card.details.hob > 0 && (
-            <Styled.Feature>
-              <Styled.Item>
+            <Feature>
+              <Item>
                 <img src={Hob} alt="hob" width="20" height="20" />
                 {card.details.hob} Hob
-              </Styled.Item>
-            </Styled.Feature>
+              </Item>
+            </Feature>
           )}
           {card.details.freezer > 0 && (
-            <Styled.Feature>
-              <Styled.Item>
+            <Feature>
+              <Item>
                 <img src={Freezer} alt="freezer" width="20" height="20" />
                 Freezer
-              </Styled.Item>
-            </Styled.Feature>
+              </Item>
+            </Feature>
           )}
           {card.details.microwave > 0 && (
-            <Styled.Feature>
-              <Styled.Item>
+            <Feature>
+              <Item>
                 <img src={Microwave} alt="microwave" width="20" height="20" />
                 Microwave
-              </Styled.Item>
-            </Styled.Feature>
+              </Item>
+            </Feature>
           )}
-        </Styled.ItemContainer>
-        <Styled.ParamContainer>
-          <Styled.Title>Vehicle details</Styled.Title>
-          <Styled.Param>
+        </ItemContainer>
+        <ParamContainer>
+          <Title>Vehicle details</Title>
+          <Param>
             <span>Form</span> <span>{capitalizeString(card.form)}</span>
-          </Styled.Param>
-          <Styled.Param>
+          </Param>
+          <Param>
             <span>Length</span> <span>{addSpaceBetweenNumberAndUnit(card.length)}</span>
-          </Styled.Param>
-          <Styled.Param>
+          </Param>
+          <Param>
             <span>Width</span> <span>{addSpaceBetweenNumberAndUnit(card.width)}</span>
-          </Styled.Param>
-          <Styled.Param>
+          </Param>
+          <Param>
             <span>Height</span> <span>{addSpaceBetweenNumberAndUnit(card.height)}</span>
-          </Styled.Param>
-          <Styled.Param>
+          </Param>
+          <Param>
             <span>Tank</span> <span>{addSpaceBetweenNumberAndUnit(card.tank)}</span>
-          </Styled.Param>
-          <Styled.Param>
+          </Param>
+          <Param>
             <span>Consumption</span> <span>{addSpaceBetweenNumberAndUnit(card.consumption)}</span>
-          </Styled.Param>
-        </Styled.ParamContainer>
-      </Styled.FeaturesContainer>
+          </Param>
+        </ParamContainer>
+      </FeaturesContainer>
       <Booking />
-    </Styled.InfoContainer>
+    </InfoContainer>
   );
 };
 

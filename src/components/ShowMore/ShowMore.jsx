@@ -1,6 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import Modal from '../Modal/Modal';
-import * as Styled from './ShowMore.styled.jsx';
+import {
+  Card,
+  ScrollContainer,
+  InfoContainer,
+  TitleContainer,
+  Title,
+  ReviewsContainer,
+  ReviewText,
+  Location,
+  Price,
+  ImageContainer,
+  Image,
+  Description,
+  ButtomContainer,
+  TabButton
+} from './ShowMore.styled.jsx';
 import Features from './Features/Features.jsx';
 import Reviews from './Reviews/Reviews.jsx';
 import Star from '../../assets/MYSVG/star.svg';
@@ -33,38 +48,38 @@ const ShowMore = ({ card, showModal }) => {
 
   return (
     <Modal width={modalWidth} height={720} onClose={() => showModal(false)}>
-      <Styled.Card>
-        <Styled.ScrollContainer>
-          <Styled.InfoContainer>
-            <Styled.TitleContainer>
-              <Styled.Title>{card.name}</Styled.Title>
-              <Styled.ReviewsContainer>
+      <Card>
+        <ScrollContainer>
+          <InfoContainer>
+            <TitleContainer>
+              <Title>{card.name}</Title>
+              <ReviewsContainer>
                 <img src={Star} alt="Star" width="16" height="16" />
-                <Styled.ReviewText>{averageRating} ({card.reviews.length} Reviews)</Styled.ReviewText>
+                <ReviewText>{averageRating} ({card.reviews.length} Reviews)</ReviewText>
                 <img src={Map} alt="Map point" width="16" height="16" />
-                <Styled.Location>{card.location}</Styled.Location>
-              </Styled.ReviewsContainer>
-              <Styled.Price>{formattedPrice}</Styled.Price>
-            </Styled.TitleContainer>
-            <Styled.ImageContainer>
+                <Location>{card.location}</Location>
+              </ReviewsContainer>
+              <Price>{formattedPrice}</Price>
+            </TitleContainer>
+            <ImageContainer>
               {card.gallery.map((image, index) => (
-                <Styled.Image key={index} src={image} alt={`Picture of ${card.name}`} />
+                <Image key={index} src={image} alt={`Picture of ${card.name}`} />
               ))}
-            </Styled.ImageContainer>
-            <Styled.Description>{card.description}</Styled.Description>
-          </Styled.InfoContainer>
-          <Styled.ButtomContainer>
-            <Styled.TabButton active={activeTab === 'Features'} onClick={() => setActiveTab('Features')}>
+            </ImageContainer>
+            <Description>{card.description}</Description>
+          </InfoContainer>
+          <ButtomContainer>
+            <TabButton active={activeTab === 'Features'} onClick={() => setActiveTab('Features')}>
               Features
-            </Styled.TabButton>
-            <Styled.TabButton active={activeTab === 'Reviews'} onClick={() => setActiveTab('Reviews')}>
+            </TabButton>
+            <TabButton active={activeTab === 'Reviews'} onClick={() => setActiveTab('Reviews')}>
               Reviews
-            </Styled.TabButton>
-          </Styled.ButtomContainer>
+            </TabButton>
+          </ButtomContainer>
           {activeTab === 'Features' && <Features card={card} />}
           {activeTab === 'Reviews' && <Reviews card={card} />}
-        </Styled.ScrollContainer>
-      </Styled.Card>
+        </ScrollContainer>
+      </Card>
     </Modal>
   );
 };

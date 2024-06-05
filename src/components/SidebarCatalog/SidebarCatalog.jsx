@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import CamperCard from 'components/CamperCard/CamperCard.jsx';
-import * as Styled from './SidebarCatalog.styled.jsx';
+import {
+  SidebarContainer,
+  NoResultsMessage,
+  LoadMoreButton
+} from './SidebarCatalog.styled.jsx';
 
 const SidebarCatalog = ({ cards }) => {
   const [visibleCount, setVisibleCount] = useState(4);
@@ -10,22 +14,22 @@ const SidebarCatalog = ({ cards }) => {
   };
 
   return (
-    <Styled.SidebarContainer>
+    <SidebarContainer>
       {cards.length === 0 ? (
-        <Styled.NoResultsMessage>No results found</Styled.NoResultsMessage>
+        <NoResultsMessage>No results found</NoResultsMessage>
       ) : (
         <>
           {cards.slice(0, visibleCount).map(card => (
             <CamperCard key={card.id} card={card} />
           ))}
           {visibleCount < cards.length && (
-            <Styled.LoadMoreButton onClick={handleLoadMore}>
+            <LoadMoreButton onClick={handleLoadMore}>
               Load more
-            </Styled.LoadMoreButton>
+            </LoadMoreButton>
           )}
         </>
       )}
-    </Styled.SidebarContainer>
+    </SidebarContainer>
   );
 };
 

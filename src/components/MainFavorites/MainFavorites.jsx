@@ -1,7 +1,23 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { filterInterests } from '../../redux/cards/interestsSlice'; 
-import * as Styled from './MainFavorites.styled';
+import {
+  Container,
+  LocationSection,
+  SupportingText,
+  InputForm,
+  Input,
+  FiltersTitle,
+  FiltersSection,
+  ContainerVehicle,
+  FilterTitle,
+  Divider,
+  Filters,
+  FilterButton,
+  IconWrapper,
+  ButtonText,
+  Button
+} from './MainFavorites.styled';
 import { ReactComponent as Ac } from '../../assets/MYSVG/AC.svg';
 import { ReactComponent as Transmission } from '../../assets/MYSVG/transmission.svg';
 import { ReactComponent as Kitchen } from '../../assets/MYSVG/kitchen.svg';
@@ -40,7 +56,7 @@ const MainFavorites = () => {
     }
   };
 
-  const handleEquipmentSelect = (equipmentType, setEquipmentType) => {
+  const handleEquipmentSelect = (setEquipmentType) => {
     setEquipmentType((prevState) => !prevState);
   };
 
@@ -63,108 +79,108 @@ const MainFavorites = () => {
   };
 
   return (
-    <Styled.Container>
-      <Styled.LocationSection>
-        <Styled.SupportingText>Location</Styled.SupportingText>
-        <Styled.InputForm>
-          <Styled.Input
+    <Container>
+      <LocationSection>
+        <SupportingText>Location</SupportingText>
+        <InputForm>
+          <Input
             type="text"
             placeholder="Kyiv, Ukraine"
             icon={Map}
             value={location} 
             onChange={handleLocationChange} 
           />
-        </Styled.InputForm>
-      </Styled.LocationSection>
-      <Styled.FiltersTitle>Filters</Styled.FiltersTitle>
-      <Styled.FiltersSection>
-        <Styled.ContainerVehicle>
-          <Styled.FilterTitle>Vehicle equipment</Styled.FilterTitle>
-          <Styled.Divider />
-          <Styled.Filters>
-            <Styled.FilterButton
+        </InputForm>
+      </LocationSection>
+      <FiltersTitle>Filters</FiltersTitle>
+      <FiltersSection>
+        <ContainerVehicle>
+          <FilterTitle>Vehicle equipment</FilterTitle>
+          <Divider />
+          <Filters>
+            <FilterButton
               isselected={acSelected}
-              onClick={() => handleEquipmentSelect('AC', setAcSelected)}
+              onClick={() => handleEquipmentSelect(setAcSelected)}
             >
-              <Styled.IconWrapper>
+              <IconWrapper>
                 <Ac width="32" height="32" />
-              </Styled.IconWrapper>
-              <Styled.ButtonText>AC</Styled.ButtonText>
-            </Styled.FilterButton>
-            <Styled.FilterButton
+              </IconWrapper>
+              <ButtonText>AC</ButtonText>
+            </FilterButton>
+            <FilterButton
               isselected={automaticSelected}
-              onClick={() => handleEquipmentSelect('Automatic', setAutomaticSelected)}
+              onClick={() => handleEquipmentSelect(setAutomaticSelected)}
             >
-              <Styled.IconWrapper>
+              <IconWrapper>
                 <Transmission width="32" height="32" />
-              </Styled.IconWrapper>
-              <Styled.ButtonText>Automatic</Styled.ButtonText>
-            </Styled.FilterButton>
-            <Styled.FilterButton
+              </IconWrapper>
+              <ButtonText>Automatic</ButtonText>
+            </FilterButton>
+            <FilterButton
               isselected={kitchenSelected}
-              onClick={() => handleEquipmentSelect('Kitchen', setKitchenSelected)}
+              onClick={() => handleEquipmentSelect(setKitchenSelected)}
             >
-              <Styled.IconWrapper>
+              <IconWrapper>
                 <Kitchen width="32" height="32" />
-              </Styled.IconWrapper>
-              <Styled.ButtonText>Kitchen</Styled.ButtonText>
-            </Styled.FilterButton>
-            <Styled.FilterButton
+              </IconWrapper>
+              <ButtonText>Kitchen</ButtonText>
+            </FilterButton>
+            <FilterButton
               isselected={tvSelected}
-              onClick={() => handleEquipmentSelect('TV', setTvSelected)}
+              onClick={() => handleEquipmentSelect(setTvSelected)}
             >
-              <Styled.IconWrapper>
+              <IconWrapper>
                 <TV width="32" height="32" />
-              </Styled.IconWrapper>
-              <Styled.ButtonText>TV</Styled.ButtonText>
-            </Styled.FilterButton>
-            <Styled.FilterButton
+              </IconWrapper>
+              <ButtonText>TV</ButtonText>
+            </FilterButton>
+            <FilterButton
               isselected={showerSelected}
-              onClick={() => handleEquipmentSelect('Shower', setShowerSelected)}
+              onClick={() => handleEquipmentSelect(setShowerSelected)}
             >
-              <Styled.IconWrapper>
+              <IconWrapper>
                 <Shower width="32" height="32" />
-              </Styled.IconWrapper>
-              <Styled.ButtonText>Shower/WC</Styled.ButtonText>
-            </Styled.FilterButton>
-          </Styled.Filters>
-        </Styled.ContainerVehicle>
-        <Styled.ContainerVehicle>
-          <Styled.FilterTitle>Vehicle type</Styled.FilterTitle>
-          <Styled.Divider />
-          <Styled.Filters>
-            <Styled.FilterButton
+              </IconWrapper>
+              <ButtonText>Shower/WC</ButtonText>
+            </FilterButton>
+          </Filters>
+        </ContainerVehicle>
+        <ContainerVehicle>
+          <FilterTitle>Vehicle type</FilterTitle>
+          <Divider />
+          <Filters>
+            <FilterButton
               isselected={vanSelected}
               onClick={() => handleVehicleSelect('panelTruck')}
             >
-              <Styled.IconWrapper>
+              <IconWrapper>
                 <Van width="40" height="28" />
-              </Styled.IconWrapper>
-              <Styled.ButtonText>Van</Styled.ButtonText>
-            </Styled.FilterButton>
-            <Styled.FilterButton
+              </IconWrapper>
+              <ButtonText>Van</ButtonText>
+            </FilterButton>
+            <FilterButton
               isselected={fullSelected}
               onClick={() => handleVehicleSelect('fullyIntegrated')}
             >
-              <Styled.IconWrapper>
+              <IconWrapper>
                 <Fully width="40" height="28" />
-              </Styled.IconWrapper>
-              <Styled.ButtonText>Fully Integrated</Styled.ButtonText>
-            </Styled.FilterButton>
-            <Styled.FilterButton
+              </IconWrapper>
+              <ButtonText>Fully Integrated</ButtonText>
+            </FilterButton>
+            <FilterButton
               isselected={alcoveSelected}
               onClick={() => handleVehicleSelect('alcove')}
             >
-              <Styled.IconWrapper>
+              <IconWrapper>
                 <Alcove width="40" height="28" />
-              </Styled.IconWrapper>
-              <Styled.ButtonText>Alcove</Styled.ButtonText>
-            </Styled.FilterButton>
-          </Styled.Filters>
-        </Styled.ContainerVehicle>
-      </Styled.FiltersSection>
-      <Styled.Button onClick={handleSearch}>Search</Styled.Button>
-    </Styled.Container>
+              </IconWrapper>
+              <ButtonText>Alcove</ButtonText>
+            </FilterButton>
+          </Filters>
+        </ContainerVehicle>
+      </FiltersSection>
+      <Button onClick={handleSearch}>Search</Button>
+    </Container>
   );
 };
 

@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchAllAdverts } from '../../redux/adverts/advertsOperation.js';
-import HeaderCatalog from 'components/HeaderCatalog/HeaderCatalog.jsx';
-import MainCatalog from 'components/MainCatalog/MainCatalog.jsx';
-import SidebarCatalog from 'components/SidebarCatalog/SidebarCatalog.jsx';
-import * as Styled from './CatalogPage.styled.jsx';
+import { fetchAllAdverts } from '../../redux/adverts/advertsOperation';
+import HeaderCatalog from 'components/HeaderCatalog/HeaderCatalog';
+import MainCatalog from 'components/MainCatalog/MainCatalog';
+import SidebarCatalog from 'components/SidebarCatalog/SidebarCatalog';
+import Loader from 'components/Loader/Loader';
+import {
+  ContainerCatalog,
+  ContentWrapper,
+  MainContent,
+  SidebarContent
+} from './CatalogPage.styled';
 
 const CatalogPage = () => {
   const dispatch = useDispatch();
@@ -35,19 +41,20 @@ const CatalogPage = () => {
   const cardsToDisplay = filterApplied ? filteredCards : cards;
 
   return (
-    <Styled.ContainerCatalog>
+    <ContainerCatalog>
       <HeaderCatalog />
-      <Styled.ContentWrapper>
-        <Styled.MainContent>
+      {loading && <Loader />}
+      <ContentWrapper>
+        <MainContent>
           <MainCatalog onSearch={handleSearch} />
-        </Styled.MainContent>
+        </MainContent>
         {!loading && (
-          <Styled.SidebarContent>
+          <SidebarContent>
             <SidebarCatalog cards={cardsToDisplay} />
-          </Styled.SidebarContent>
+          </SidebarContent>
         )}
-      </Styled.ContentWrapper>
-    </Styled.ContainerCatalog>
+      </ContentWrapper>
+    </ContainerCatalog>
   );
 };
 

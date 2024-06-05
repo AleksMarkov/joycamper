@@ -1,32 +1,41 @@
 import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import HeaderFavorites from 'components/HeaderFavorites/HeaderFavorites.jsx';
-import MainFavorites from 'components/MainFavorites/MainFavorites.jsx';
-import * as Styled from './FavoritesPage.styled.jsx';
-import SidebarFavorites from 'components/SidebarFavorites/SidebarFavorites.jsx';
+import { useDispatch, useSelector } from 'react-redux';
+import HeaderFavorites from 'components/HeaderFavorites/HeaderFavorites';
+import MainFavorites from 'components/MainFavorites/MainFavorites';
+import Loader from 'components/Loader/Loader';
+import {
+  ContainerFavorites,
+  ContentWrapper,
+  MainContent,
+  SidebarContent
+} from './FavoritesPage.styled';
+import SidebarFavorites from 'components/SidebarFavorites/SidebarFavorites';
 import { filterInterests } from '../../redux/cards/interestsSlice';
 
 const FavoritesPage = () => {
   const dispatch = useDispatch();
+  const { loading } = useSelector((state) => state.interests);
 
   useEffect(() => {
     dispatch(filterInterests({}));
   }, [dispatch]);
 
   return (
-    <Styled.ContainerFavorites>
+    <ContainerFavorites>
       <HeaderFavorites />
-      <Styled.ContentWrapper>
-        <Styled.MainContent>
+      {loading && <Loader />}
+      <ContentWrapper>
+        <MainContent>
           <MainFavorites />
-        </Styled.MainContent>
-        <Styled.SidebarContent>
-          <SidebarFavorites />
-        </Styled.SidebarContent>
-      </Styled.ContentWrapper>
-    </Styled.ContainerFavorites>
+        </MainContent>
+        {!loading && (
+          <SidebarContent>
+            <SidebarFavorites />
+          </SidebarContent>
+        )}
+      </ContentWrapper>
+    </ContainerFavorites>
   );
 };
 
 export default FavoritesPage;
-

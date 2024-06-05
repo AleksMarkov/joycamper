@@ -7,7 +7,7 @@ export const MainSection = styled.section`
   flex-grow: 1;
   gap: 50px;
   padding: 100px;
-  padding-top: 50px;
+  padding: 50px;
   background-color: #f9f9f9;
   align-items: center;
   overflow: hidden;

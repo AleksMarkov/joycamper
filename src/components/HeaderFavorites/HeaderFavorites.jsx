@@ -1,19 +1,24 @@
 import React from 'react';
-import * as Styled from './HeaderFavorites.styled.jsx';
 import { Link } from 'react-router-dom';
+import {
+  TopBar,
+  ButtonContainer,
+  ButtonLeft,
+  ButtonRight
+} from './HeaderFavorites.styled.jsx';
 
 const HeaderFavorites = () => {
   return (
-    <Styled.TopBar>
-      <Styled.ButtonContainer>
+    <TopBar>
+      <ButtonContainer>
         <Link to="/">
-          <Styled.ButtonLeft>Home</Styled.ButtonLeft>
+          <ButtonLeft>Home</ButtonLeft>
         </Link>
         <Link to="/catalog">
-          <Styled.ButtonRight>Catalogue</Styled.ButtonRight>
+          <ButtonRight>Catalogue</ButtonRight>
         </Link>
-      </Styled.ButtonContainer>
-    </Styled.TopBar>
+      </ButtonContainer>
+    </TopBar>
   );
 };
 

@@ -1,5 +1,16 @@
 import React from 'react';
-import * as Styled from './Reviews.styled.jsx';
+import { 
+  InfoContainer, 
+  ReviewsContainer, 
+  ReviewItem, 
+  Rating, 
+  Avatar, 
+  Stars, 
+  ReviewerName, 
+  StarContainer, 
+  Star, 
+  Comment 
+} from './Reviews.styled.jsx';
 import Booking from '../Booking/Booking.jsx';
 import StarYes from '../../../assets/MYSVG/star.svg';
 import StarNo from '../../../assets/MYSVG/starno.svg';
@@ -13,33 +24,33 @@ const Reviews = ({ card }) => {
   const renderStars = (rating) => {
     const stars = [];
     for (let i = 0; i < 5; i++) {
-      stars.push(<Styled.Star key={i} src={i < rating ? StarYes : StarNo} alt="Star" />);
+      stars.push(<Star key={i} src={i < rating ? StarYes : StarNo} alt="Star" />);
     }
     return stars;
   };
 
   return (
-    <Styled.InfoContainer>
-      <Styled.ReviewsContainer>
+    <InfoContainer>
+      <ReviewsContainer>
         {card.reviews.map((review, index) => (
-          <Styled.ReviewItem key={index}>
-            <Styled.Rating>
-              <Styled.Avatar>
+          <ReviewItem key={index}>
+            <Rating>
+              <Avatar>
                 {getFirstLetter(review.reviewer_name)}
-              </Styled.Avatar>
-              <Styled.Stars>
-                <Styled.ReviewerName>{review.reviewer_name}</Styled.ReviewerName>
-                <Styled.StarContainer>
+              </Avatar>
+              <Stars>
+                <ReviewerName>{review.reviewer_name}</ReviewerName>
+                <StarContainer>
                   {renderStars(review.reviewer_rating)}
-                </Styled.StarContainer>
-              </Styled.Stars>
-            </Styled.Rating>
-            <Styled.Comment>{review.comment}</Styled.Comment>
-          </Styled.ReviewItem>
+                </StarContainer>
+              </Stars>
+            </Rating>
+            <Comment>{review.comment}</Comment>
+          </ReviewItem>
         ))}
-      </Styled.ReviewsContainer>
+      </ReviewsContainer>
       <Booking />
-    </Styled.InfoContainer>
+    </InfoContainer>
   );
 };
 

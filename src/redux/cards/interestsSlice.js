@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   interestingCards: JSON.parse(localStorage.getItem('interestingCards')) || [],
   filteredCards: [],
+  loading: false,
 };
 
 const interestsSlice = createSlice({
@@ -18,6 +19,7 @@ const interestsSlice = createSlice({
       localStorage.setItem('interestingCards', JSON.stringify(state.interestingCards));
     },
     filterInterests: (state, action) => {
+      state.loading = true;
       state.filteredCards = state.interestingCards.filter(card => {
         return (
           (!action.payload.acSelected || card.details.airConditioner === 1) &&
@@ -31,6 +33,7 @@ const interestsSlice = createSlice({
           (!action.payload.location || card.location.toLowerCase().includes(action.payload.location.toLowerCase()))
         );
       });
+      state.loading = false;
     },
   },
 });

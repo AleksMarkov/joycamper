@@ -1,24 +1,30 @@
 import React from 'react';
-import * as Styled from './WelcomePage.styled.jsx';
-import FooterPage from 'components/FooterPage/FooterPage.jsx';
-import HomePage from 'components/HomePage/HomePage.jsx';
+import {
+  Home,
+  ButtonContainer,
+  ButtonLeft,
+  ButtonRight
+} from './WelcomePage.styled.jsx';
+import FooterPage from 'components/FooterPage/FooterPage';
+import HomePage from 'components/HomePage/HomePage';
 import { Link } from 'react-router-dom';
 
 const WelcomePage = () => {
   return (
-    <Styled.Home>
+    <Home>
       <HomePage />
-      <Styled.ButtonContainer>
+      <ButtonContainer>
         <Link to="/catalog">
-          <Styled.ButtonLeft>Catalogue</Styled.ButtonLeft>
+          <ButtonLeft>Catalogue</ButtonLeft>
         </Link>
         <Link to="/favorites">
-          <Styled.ButtonRight>Favorites</Styled.ButtonRight>
+          <ButtonRight>Favorites</ButtonRight>
         </Link>
-      </Styled.ButtonContainer>
+      </ButtonContainer>
       <FooterPage />
-    </Styled.Home>
+    </Home>
   );
 };
 
 export default WelcomePage;
+

@@ -1,22 +1,28 @@
 import React from 'react';
-import * as Styled from './HeaderCatalog.styled.jsx';
 import { Link } from 'react-router-dom';
+import {
+  TopBar,
+  ButtonContainer,
+  ButtonLeft,
+  ButtonRight
+} from './HeaderCatalog.styled.jsx';
 
 const HeaderCatalog = () => {
   return (
-    <Styled.TopBar>
-      <Styled.ButtonContainer>
-      <Link to="/">
-        <Styled.ButtonLeft>Home</Styled.ButtonLeft>
-      </Link>
-      <Link to="/favorites">
-        <Styled.ButtonRight>Favorites</Styled.ButtonRight>
-      </Link>
-      </Styled.ButtonContainer>
-    </Styled.TopBar>
+    <TopBar>
+      <ButtonContainer>
+        <Link to="/">
+          <ButtonLeft>Home</ButtonLeft>
+        </Link>
+        <Link to="/favorites">
+          <ButtonRight>Favorites</ButtonRight>
+        </Link>
+      </ButtonContainer>
+    </TopBar>
   );
 };
 
 export default HeaderCatalog;
+
 
 
