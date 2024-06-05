@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/joycamper/static/css/main.7acaea2f.css",
-    "main.js": "/joycamper/static/js/main.61ef49f0.js",
+    "main.js": "/joycamper/static/js/main.614f5a7b.js",
     "static/media/Inter-SemiBold.ttf": "/joycamper/static/media/Inter-SemiBold.6058d3da655fb35169c2.ttf",
     "static/media/Inter-Medium.ttf": "/joycamper/static/media/Inter-Medium.3f7acfe50aad7ad68548.ttf",
     "static/media/Inter-Regular.ttf": "/joycamper/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
@@ -32,10 +32,10 @@
     "static/media/shower.svg": "/joycamper/static/media/shower.1b34cb6fae7106a305740b6f0fbde0ea.svg",
     "static/media/close.svg": "/joycamper/static/media/close.25dc3f46a342a188874fa545ced03ca2.svg",
     "main.7acaea2f.css.map": "/joycamper/static/css/main.7acaea2f.css.map",
-    "main.61ef49f0.js.map": "/joycamper/static/js/main.61ef49f0.js.map"
+    "main.614f5a7b.js.map": "/joycamper/static/js/main.614f5a7b.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.61ef49f0.js"
+    "static/js/main.614f5a7b.js"
   ]
 }
