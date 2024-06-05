@@ -117,8 +117,8 @@ const MainCatalog = ({ onSearch }) => {
           <Styled.Divider />
           <Styled.Filters>
             <Styled.FilterButton
-              isselected={selectedVehicle === 'van'}
-              onClick={() => handleVehicleSelect('van')}
+              isselected={selectedVehicle === 'panelTruck'}
+              onClick={() => handleVehicleSelect('panelTruck')}
             >
               <Styled.IconWrapper>
                 <Van width="40" height="28" />

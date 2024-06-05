@@ -25,7 +25,7 @@ const MainFavorites = () => {
   const [alcoveSelected, setAlcoveSelected] = useState(false);
 
   const handleVehicleSelect = (vehicleType) => {
-    if (vehicleType === 'van') {
+    if (vehicleType === 'panelTruck') {
       setVanSelected(!vanSelected);
       setFullSelected(false);
       setAlcoveSelected(false);
@@ -135,7 +135,7 @@ const MainFavorites = () => {
           <Styled.Filters>
             <Styled.FilterButton
               isselected={vanSelected}
-              onClick={() => handleVehicleSelect('van')}
+              onClick={() => handleVehicleSelect('panelTruck')}
             >
               <Styled.IconWrapper>
                 <Van width="40" height="28" />

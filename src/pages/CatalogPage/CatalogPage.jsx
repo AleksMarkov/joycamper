@@ -1,30 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchAllAdverts } from '../../redux/adverts/advertsOperation.js';
 import HeaderCatalog from 'components/HeaderCatalog/HeaderCatalog.jsx';
 import MainCatalog from 'components/MainCatalog/MainCatalog.jsx';
 import SidebarCatalog from 'components/SidebarCatalog/SidebarCatalog.jsx';
 import * as Styled from './CatalogPage.styled.jsx';
 
 const CatalogPage = () => {
-  const [cards, setCards] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const dispatch = useDispatch();
+  const { cards, loading } = useSelector((state) => state.adverts);
   const [filteredCards, setFilteredCards] = useState([]);
   const [filterApplied, setFilterApplied] = useState(false);
 
   useEffect(() => {
-    fetch('https://665b72a0003609eda460e874.mockapi.io/api/adverts')
-      .then(response => response.json())
-      .then(data => {
-        setCards(data);
-        setLoading(false);
-      })
-      .catch(error => {
-        console.error('Error fetching cards:', error);
-        setLoading(false);
-      });
-  }, []);
+    dispatch(fetchAllAdverts());
+  }, [dispatch]);
 
   const handleSearch = (filters) => {
-    const filtered = cards.filter(card => {
+    const filtered = cards.filter((card) => {
       return (
         (!filters.acSelected || card.details.airConditioner === 1) &&
         (!filters.automaticSelected || card.transmission.toLowerCase() === 'automatic') &&
