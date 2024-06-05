@@ -1,18 +1,23 @@
 import styled from 'styled-components';
 
 export const SidebarContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 24px;
-  width: 400px; 
-  padding-left: 64px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 24px;
+width: 400px;
+padding-left: 64px;
 
-  @media (max-width: 1440px) {
-    width: 100%;
-    padding-left: 0;
-    align-items: center;
-  }
+@media (max-width: 1440px) {
+  width: 300px;
+  padding-left: 0px;
+}
+
+@media (max-width: 768px) {
+  width: 100%;
+  padding-left: 5px;
+  max-height: 550px;
+}
 `;
 
 export const LoadMoreButton = styled.button`

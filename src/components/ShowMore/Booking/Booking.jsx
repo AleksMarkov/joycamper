@@ -1,13 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, forwardRef } from 'react';
 import * as Styled from './Booking.styled.jsx';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import HobIcon from '../../../assets/MYSVG/calendar.svg';
 import { validateName, validateEmail, validateDate } from '../../../helpers/validation.js';
 
 const Booking = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [date, setDate] = useState('');
+  const [date, setDate] = useState(null);
   const [comment, setComment] = useState('');
   const [errors, setErrors] = useState({});
+
+  const handleDateChange = (date) => {
+    setDate(date);
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -31,9 +38,33 @@ const Booking = () => {
     } else {
       setErrors({});
       console.log({ name, email, date, comment });
-      window.location.reload(); 
+      setName('');
+      setEmail('');
+      setDate(null);
+      setComment('');
+      window.location.reload();
     }
   };
+
+  const CustomInput = forwardRef(({ value, onClick, onChange, placeholder }, ref) => (
+    <div onClick={onClick} style={{ position: 'relative' }}>
+      <Styled.Input
+        type="text"
+        value={value}
+        onChange={onChange}
+        placeholder={placeholder}
+        ref={ref}
+        className={errors.date ? 'invalid' : ''}
+        readOnly
+      />
+      <Styled.Icon
+        src={HobIcon}
+        alt="Calendar icon"
+        onClick={onClick}
+        style={{ position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)' }}
+      />
+    </div>
+  ));
 
   return (
     <Styled.Container>
@@ -57,12 +88,15 @@ const Booking = () => {
         {errors.email && <Styled.Error>{errors.email}</Styled.Error>}
 
         <Styled.InputContainer>
-          <Styled.Input
-            type="date"
-            placeholder="Booking date"
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
-            className={errors.date ? 'invalid' : ''}
+          <DatePicker
+            selected={date}
+            onChange={handleDateChange}
+            customInput={
+              <CustomInput
+                placeholder="Booking date"
+                value={date ? date.toISOString().split('T')[0] : ''}
+              />
+            }
           />
         </Styled.InputContainer>
         {errors.date && <Styled.Error>{errors.date}</Styled.Error>}

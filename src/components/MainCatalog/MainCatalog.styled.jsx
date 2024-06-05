@@ -1,19 +1,18 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-left: 64px;
-  position: relative;
-  width: 360px;
-  box-sizing: border-box;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+margin-left: 64px;
+position: relative;
+width: 360px;
+box-sizing: border-box;
 
-  @media (max-width: 779px) {
-    width: 100%;
-    margin-left: 0;
-    padding: 0 16px;
-  }
+@media (max-width: 1300px) {
+  margin-left: 5px;
+  width: 100%;
+}
 `;
 
 export const LocationSection = styled.div`
@@ -23,7 +22,7 @@ export const LocationSection = styled.div`
   height: 88px;
   gap: 8px;
 
-  @media (max-width: 779px) {
+  @media (max-width: 768px) {
     width: 100%;
   }
 `;
@@ -34,7 +33,7 @@ export const SupportingText = styled.div`
   line-height: 1.5;
   color: rgba(16, 24, 40, 0.6);
 
-  @media (max-width: 779px) {
+  @media (max-width: 768px) {
     font-size: 14px;
   }
 `;
@@ -46,7 +45,7 @@ export const InputForm = styled.div`
   height: 56px;
   display: flex;
 
-  @media (max-width: 779px) {
+  @media (max-width: 768px){
     width: 100%;
   }
 `;
@@ -82,7 +81,7 @@ export const FiltersTitle = styled.div`
   margin-top: 32px;
   margin-bottom: 14px;
 
-  @media (max-width: 779px) {
+  @media (max-width: 768px) {
     font-size: 14px;
     margin-top: 24px;
     margin-bottom: 10px;
@@ -110,7 +109,7 @@ export const FilterTitle = styled.div`
   color: var(--main);
   margin-bottom: 24px;
 
-  @media (max-width: 779px) {
+  @media (max-width: 768px) {
     font-size: 18px;
     margin-bottom: 16px;
   }
@@ -147,7 +146,7 @@ export const FilterButton = styled.button`
     background-color: #fdecec;
   }
 
-  @media (max-width: 779px) {
+  @media (max-width: 768px) {
     width: 100px;
     height: 80px;
     font-size: 14px;
@@ -174,7 +173,7 @@ export const ButtonText = styled.div`
   color: var(--main);
   margin-top: 8px;
 
-  @media (max-width: 779px) {
+  @media (max-width: 768px) {
     font-size: 14px;
   }
 
@@ -202,7 +201,7 @@ export const Button = styled.button`
     background-color: #d84343;
   }
 
-  @media (max-width: 779px) {
+  @media (max-width: 768px) {
     width: 150px;
     height: 48px;
     font-size: 14px;

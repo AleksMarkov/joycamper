@@ -5,23 +5,37 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
-  width: 400px; 
+  width: 400px;
   padding-left: 64px;
+
+  @media (max-width: 1440px) {
+    width: 300px;
+    padding-left: 0px;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding-left: 5px;
+    max-height: 550px;
+  }
 `;
 
 export const EmptyMessage = styled.div`
-
   font-weight: 500;
   font-size: 24px;
   line-height: 1.5;
   color: var(--main);
-  text-align: center; 
+  text-align: center;
   margin-top: 20px;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 `;
 
 export const Highlight = styled.span`
-  font-weight: 700; 
-  text-decoration: underline; 
+  font-weight: 700;
+  text-decoration: underline;
   color: #ff4500;
 `;
 
@@ -39,10 +53,15 @@ export const LoadMoreButton = styled.button`
   cursor: pointer;
   margin-top: 20px;
   margin-bottom: 100px;
-  position: relative; 
+  position: relative;
   margin-left: 370px;
 
   &:hover {
     border: 1px solid var(--button);
+  }
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    align-self: center;
   }
 `;

@@ -8,6 +8,11 @@ export const Container = styled.div`
   position: relative;
   width: 360px;
   box-sizing: border-box;
+
+  @media (max-width: 1300px) {
+    margin-left: 5px;
+    width: 100%;
+  }
 `;
 
 export const LocationSection = styled.div`
@@ -16,6 +21,10 @@ export const LocationSection = styled.div`
   width: 360px;
   height: 88px;
   gap: 8px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const SupportingText = styled.div`
@@ -31,6 +40,10 @@ export const InputForm = styled.div`
   width: 360px;
   height: 56px;
   display: flex;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const Input = styled.input`
@@ -146,5 +159,8 @@ export const Button = styled.button`
   &:hover {
     background-color: #d84343;
   }
-`;
 
+  @media (max-width: 768px) {
+    align-self: center;
+  }
+`;

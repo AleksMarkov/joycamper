@@ -81,7 +81,6 @@ export const Input = styled.input`
   font-weight: 400;
   font-size: 16px;
   color: var(--main);
-  background: url(${({ icon }) => icon}) no-repeat 362px center / 20px 20px, var(--block-features);
 
   &::placeholder {
     color: rgba(16, 24, 40, 0.6);
@@ -124,6 +123,7 @@ export const Icon = styled.img`
   right: 16px;
   width: 20px;
   height: 20px;
+  cursor: pointer;
 `;
 
 export const TextArea = styled.textarea`

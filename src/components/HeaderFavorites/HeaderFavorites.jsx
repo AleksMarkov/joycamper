@@ -18,5 +18,3 @@ const HeaderFavorites = () => {
 };
 
 export default HeaderFavorites;
-
-
