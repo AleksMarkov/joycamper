@@ -9,12 +9,12 @@ import {
   ContainerCatalog,
   ContentWrapper,
   MainContent,
-  SidebarContent
+  SidebarContent,
 } from './CatalogPage.styled';
 
 const CatalogPage = () => {
   const dispatch = useDispatch();
-  const { cards, loading } = useSelector((state) => state.adverts);
+  const { cards, loading } = useSelector(state => state.adverts);
   const [filteredCards, setFilteredCards] = useState([]);
   const [filterApplied, setFilterApplied] = useState(false);
 
@@ -22,15 +22,19 @@ const CatalogPage = () => {
     dispatch(fetchAllAdverts());
   }, [dispatch]);
 
-  const handleSearch = (filters) => {
-    const filtered = cards.filter((card) => {
+  const handleSearch = filters => {
+    const filtered = cards.filter(card => {
       return (
         (!filters.acSelected || card.details.airConditioner === 1) &&
-        (!filters.automaticSelected || card.transmission.toLowerCase() === 'automatic') &&
+        (!filters.automaticSelected ||
+          card.transmission.toLowerCase() === 'automatic') &&
         (!filters.kitchenSelected || card.details.kitchen === 1) &&
         (!filters.tvSelected || card.details.TV === 1) &&
         (!filters.showerSelected || card.details.shower === 1) &&
-        (!filters.location || card.location.toLowerCase().includes(filters.location.toLowerCase())) &&
+        (!filters.location ||
+          card.location
+            .toLowerCase()
+            .includes(filters.location.toLowerCase())) &&
         (!filters.selectedVehicle || card.form === filters.selectedVehicle)
       );
     });

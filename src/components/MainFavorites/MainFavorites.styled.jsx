@@ -53,9 +53,10 @@ export const Input = styled.input`
   height: 56px;
   font-size: 16px;
   background-color: var(--block-features);
-  color: var(--main); 
-  background: url(${({ icon }) => icon}) no-repeat 16px center / 24px 24px, var(--block-features);
-  padding-left: 50px; 
+  color: var(--main);
+  background: url(${({ icon }) => icon}) no-repeat 16px center / 24px 24px,
+    var(--block-features);
+  padding-left: 50px;
   &:hover,
   &:focus {
     color: var(--main);
@@ -109,7 +110,9 @@ export const Filters = styled.div`
 `;
 
 export const FilterButton = styled.button`
-  border: 1px solid ${({ isselected }) => (isselected ? 'var(--button)' : 'rgba(16, 24, 40, 0.2)')};
+  border: 1px solid
+    ${({ isselected }) =>
+      isselected ? 'var(--button)' : 'rgba(16, 24, 40, 0.2)'};
   border-radius: 10px;
   padding: 17px 27px;
   width: 114px;
@@ -143,7 +146,7 @@ export const ButtonText = styled.div`
 
 export const Button = styled.button`
   display: flex;
-  justify-content: flex-start; 
+  justify-content: flex-start;
   align-items: center;
   padding: 16px 60px;
   gap: 10px;

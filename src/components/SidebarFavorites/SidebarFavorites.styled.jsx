@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
+  margin-bottom: 100px;
   width: 400px;
   padding-left: 64px;
 
@@ -20,6 +20,13 @@ export const Container = styled.div`
   }
 `;
 
+export const CardsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+`;
+
 export const NotfoundMessage = styled.div`
   font-weight: 500;
   font-size: 24px;
@@ -32,7 +39,6 @@ export const NotfoundMessage = styled.div`
     font-size: 18px;
   }
 `;
-
 
 export const EmptyMessage = styled.div`
   font-weight: 500;
@@ -65,8 +71,7 @@ export const LoadMoreButton = styled.button`
   color: var(--main);
   background-color: white;
   cursor: pointer;
-  margin-top: 20px;
-  margin-bottom: 100px;
+  margin-top: 50px;
   position: relative;
   margin-left: 370px;
 

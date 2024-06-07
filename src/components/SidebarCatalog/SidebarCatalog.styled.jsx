@@ -1,23 +1,30 @@
 import styled from 'styled-components';
 
 export const SidebarContainer = styled.div`
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-gap: 24px;
-width: 400px;
-padding-left: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 100px;
+  width: 400px;
+  padding-left: 64px;
 
-@media (max-width: 1440px) {
-  width: 300px;
-  padding-left: 0px;
-}
+  @media (max-width: 1440px) {
+    width: 300px;
+    padding-left: 0px;
+  }
 
-@media (max-width: 768px) {
-  width: 100%;
-  padding-left: 5px;
-  max-height: 550px;
-}
+  @media (max-width: 768px) {
+    width: 100%;
+    padding-left: 5px;
+    max-height: 550px;
+  }
+`;
+
+export const CardsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
 `;
 
 export const LoadMoreButton = styled.button`
@@ -32,10 +39,9 @@ export const LoadMoreButton = styled.button`
   color: var(--main);
   background-color: white;
   cursor: pointer;
-  margin-top: 20px;
-  margin-bottom: 100px;
-  position: relative; 
-  margin-left: 370px; 
+  position: relative;
+  margin-left: 370px;
+  margin-top: 50px;
 
   &:hover {
     border: 1px solid var(--button);

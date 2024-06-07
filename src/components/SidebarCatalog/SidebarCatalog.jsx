@@ -3,7 +3,8 @@ import CamperCard from 'components/CamperCard/CamperCard.jsx';
 import {
   SidebarContainer,
   NoResultsMessage,
-  LoadMoreButton
+  LoadMoreButton,
+  CardsContainer,
 } from './SidebarCatalog.styled.jsx';
 
 const SidebarCatalog = ({ cards }) => {
@@ -19,13 +20,13 @@ const SidebarCatalog = ({ cards }) => {
         <NoResultsMessage>No results found</NoResultsMessage>
       ) : (
         <>
-          {cards.slice(0, visibleCount).map(card => (
-            <CamperCard key={card.id} card={card} />
-          ))}
+          <CardsContainer>
+            {cards.slice(0, visibleCount).map(card => (
+              <CamperCard key={card.id} card={card} />
+            ))}
+          </CardsContainer>
           {visibleCount < cards.length && (
-            <LoadMoreButton onClick={handleLoadMore}>
-              Load more
-            </LoadMoreButton>
+            <LoadMoreButton onClick={handleLoadMore}>Load more</LoadMoreButton>
           )}
         </>
       )}

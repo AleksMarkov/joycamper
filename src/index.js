@@ -12,7 +12,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Provider store={store}>
       <BrowserRouter basename="/joycamper">
         <GlobalStyles />
-          <App />
+        <App />
       </BrowserRouter>
     </Provider>
   </React.StrictMode>

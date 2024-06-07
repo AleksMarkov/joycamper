@@ -31,9 +31,8 @@ export const MainContent = styled.div`
 
 export const SidebarContent = styled.div`
   margin-top: 20px;
-  width: 1000px; 
+  width: 1000px;
   overflow-y: auto;
- 
 
   @media (max-width: 1440px) {
     width: 768px;
@@ -42,6 +41,5 @@ export const SidebarContent = styled.div`
   @media (max-width: 768px) {
     width: 100%;
     max-height: none;
-
   }
 `;

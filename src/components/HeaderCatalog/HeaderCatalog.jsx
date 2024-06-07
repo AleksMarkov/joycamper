@@ -4,7 +4,7 @@ import {
   TopBar,
   ButtonContainer,
   ButtonLeft,
-  ButtonRight
+  ButtonRight,
 } from './HeaderCatalog.styled.jsx';
 
 const HeaderCatalog = () => {
@@ -23,6 +23,3 @@ const HeaderCatalog = () => {
 };
 
 export default HeaderCatalog;
-
-
-

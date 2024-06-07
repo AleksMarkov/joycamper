@@ -101,7 +101,7 @@ export const Title = styled.div`
   width: 100%;
   padding-bottom: 32px;
   margin-bottom: 12px;
-  border-bottom: 1px solid #E0E0E0;
+  border-bottom: 1px solid #e0e0e0;
 
   @media (max-width: 1440px) {
     font-size: 18px;

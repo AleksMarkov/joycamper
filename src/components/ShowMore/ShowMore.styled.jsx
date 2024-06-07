@@ -11,7 +11,7 @@ export const Card = styled.div`
   width: 100%;
   max-width: 984px;
   height: 720px;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 20px;
 `;
 
@@ -100,7 +100,7 @@ export const Description = styled.div`
 export const ButtomContainer = styled.div`
   display: flex;
   width: 100%;
-  border-bottom: 1px solid #E0E0E0;
+  border-bottom: 1px solid #e0e0e0;
   margin-bottom: 32px;
 `;
 
@@ -114,7 +114,8 @@ export const TabButton = styled.button`
   padding-top: 16px;
   padding-bottom: 24px;
   margin-right: 24px;
-  border-bottom: ${props => (props.active ? '6px solid var(--button)' : 'none')};
+  border-bottom: ${props =>
+    props.active ? '6px solid var(--button)' : 'none'};
 
   &:focus {
     outline: none;

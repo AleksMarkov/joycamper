@@ -7,14 +7,14 @@ import {
   ContainerFavorites,
   ContentWrapper,
   MainContent,
-  SidebarContent
+  SidebarContent,
 } from './FavoritesPage.styled';
 import SidebarFavorites from 'components/SidebarFavorites/SidebarFavorites';
 import { filterInterests } from '../../redux/cards/interestsSlice';
 
 const FavoritesPage = () => {
   const dispatch = useDispatch();
-  const { loading } = useSelector((state) => state.interests);
+  const { loading } = useSelector(state => state.interests);
 
   useEffect(() => {
     dispatch(filterInterests({}));

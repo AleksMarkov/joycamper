@@ -9,7 +9,7 @@ export const Card = styled.div`
   gap: 24px;
   width: 888px;
   height: 358px;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid rgba(16, 24, 40, 0.2);
   border-radius: 20px;
 `;
@@ -128,11 +128,11 @@ export const FeaturesContainer = styled.div`
 `;
 
 export const Item = styled.div`
-display: flex;
-flex-direction: row;
-align-items: center;
- padding: 0px 20px;
- gap: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 20px;
+  gap: 4px;
 `;
 
 export const Feature = styled.div`

@@ -1,18 +1,18 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-margin-left: 64px;
-position: relative;
-width: 360px;
-box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 64px;
+  position: relative;
+  width: 360px;
+  box-sizing: border-box;
 
-@media (max-width: 1300px) {
-  margin-left: 5px;
-  width: 100%;
-}
+  @media (max-width: 1300px) {
+    margin-left: 5px;
+    width: 100%;
+  }
 `;
 
 export const LocationSection = styled.div`
@@ -45,7 +45,7 @@ export const InputForm = styled.div`
   height: 56px;
   display: flex;
 
-  @media (max-width: 768px){
+  @media (max-width: 768px) {
     width: 100%;
   }
 `;
@@ -57,8 +57,9 @@ export const Input = styled.input`
   height: 56px;
   font-size: 16px;
   background-color: var(--block-features);
-  color: var(--main); 
-  background: url(${({ icon }) => icon}) no-repeat 16px center / 24px 24px, var(--block-features);
+  color: var(--main);
+  background: url(${({ icon }) => icon}) no-repeat 16px center / 24px 24px,
+    var(--block-features);
   padding-left: 50px;
   &:hover,
   &:focus {
@@ -130,7 +131,9 @@ export const Filters = styled.div`
 `;
 
 export const FilterButton = styled.button`
-  border: 1px solid ${({ isselected }) => (isselected ? 'var(--button)' : 'rgba(16, 24, 40, 0.2)')};
+  border: 1px solid
+    ${({ isselected }) =>
+      isselected ? 'var(--button)' : 'rgba(16, 24, 40, 0.2)'};
   border-radius: 10px;
   padding: 17px 27px;
   width: 114px;
@@ -184,7 +187,7 @@ export const ButtonText = styled.div`
 
 export const Button = styled.button`
   display: flex;
-  justify-content: flex-start; 
+  justify-content: flex-start;
   align-items: center;
   padding: 16px 60px;
   gap: 10px;

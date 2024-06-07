@@ -1,9 +1,24 @@
 import React, { useState, forwardRef } from 'react';
-import { Container, Titles, SubTitle, Form, Input, InputContainer, Icon, TextArea, Button, Error } from './Booking.styled.jsx';
+import {
+  Container,
+  Titles,
+  SubTitle,
+  Form,
+  Input,
+  InputContainer,
+  Icon,
+  TextArea,
+  Button,
+  Error,
+} from './Booking.styled.jsx';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import HobIcon from '../../../assets/MYSVG/calendar.svg';
-import { validateName, validateEmail, validateDate } from '../../../helpers/validation.js';
+import {
+  validateName,
+  validateEmail,
+  validateDate,
+} from '../../../helpers/validation.js';
 
 const Booking = () => {
   const [name, setName] = useState('');
@@ -12,11 +27,11 @@ const Booking = () => {
   const [comment, setComment] = useState('');
   const [errors, setErrors] = useState({});
 
-  const handleDateChange = (date) => {
+  const handleDateChange = date => {
     setDate(date);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = event => {
     event.preventDefault();
     const newErrors = {};
     if (!validateName(name)) {
@@ -41,23 +56,31 @@ const Booking = () => {
     }
   };
 
-  const CustomInput = forwardRef(({ value, onClick, onChange, placeholder }, ref) => (
-    <div onClick={onClick} style={{ position: 'relative' }}>
-      <Input
-        value={value}
-        onChange={onChange}
-        placeholder="Booking date"
-        ref={ref}
-        className={errors.date ? 'invalid' : ''}
-      />
-      <Icon
-        src={HobIcon}
-        alt="Calendar icon"
-        onClick={onClick}
-        style={{ position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)', cursor: 'pointer' }}
-      />
-    </div>
-  ));
+  const CustomInput = forwardRef(
+    ({ value, onClick, onChange, placeholder }, ref) => (
+      <div onClick={onClick} style={{ position: 'relative' }}>
+        <Input
+          value={value}
+          onChange={onChange}
+          placeholder="Booking date"
+          ref={ref}
+          className={errors.date ? 'invalid' : ''}
+        />
+        <Icon
+          src={HobIcon}
+          alt="Calendar icon"
+          onClick={onClick}
+          style={{
+            position: 'absolute',
+            right: '10px',
+            top: '50%',
+            transform: 'translateY(-50%)',
+            cursor: 'pointer',
+          }}
+        />
+      </div>
+    )
+  );
 
   return (
     <Container>
@@ -67,7 +90,7 @@ const Booking = () => {
         <Input
           placeholder="Name"
           value={name}
-          onChange={(e) => setName(e.target.value)}
+          onChange={e => setName(e.target.value)}
           className={errors.name ? 'invalid' : ''}
         />
         {errors.name && <Error>{errors.name}</Error>}
@@ -75,7 +98,7 @@ const Booking = () => {
         <Input
           placeholder="Email"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={e => setEmail(e.target.value)}
           className={errors.email ? 'invalid' : ''}
         />
         {errors.email && <Error>{errors.email}</Error>}
@@ -94,7 +117,7 @@ const Booking = () => {
         <TextArea
           placeholder="Comment"
           value={comment}
-          onChange={(e) => setComment(e.target.value)}
+          onChange={e => setComment(e.target.value)}
         />
 
         <Button type="submit">Send</Button>

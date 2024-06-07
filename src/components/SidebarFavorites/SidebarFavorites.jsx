@@ -6,11 +6,14 @@ import {
   NotfoundMessage,
   EmptyMessage,
   Highlight,
-  LoadMoreButton
+  LoadMoreButton,
+  CardsContainer,
 } from './SidebarFavorites.styled';
 
 const SidebarFavorites = () => {
-  const interestingCards = useSelector(state => state.interests.interestingCards);
+  const interestingCards = useSelector(
+    state => state.interests.interestingCards
+  );
   const filteredCards = useSelector(state => state.interests.filteredCards);
   const [visibleCount, setVisibleCount] = useState(4);
 
@@ -20,23 +23,23 @@ const SidebarFavorites = () => {
 
   return (
     <Container>
-      {filteredCards.length > 0 ? (
-        filteredCards.slice(0, visibleCount).map(card => (
-          <CamperCard key={card.id} card={card} />
-        ))
-      ) : interestingCards.length > 0 ? (
-        <NotfoundMessage>
-          No results found
-        </NotfoundMessage>
-      ) : (
-        <EmptyMessage>
-          This page is for chosen campers. Please go to the <Highlight>Catalog Campers</Highlight> and choose the ones that interest you.
-        </EmptyMessage>
-      )}
+      <CardsContainer>
+        {filteredCards.length > 0 ? (
+          filteredCards
+            .slice(0, visibleCount)
+            .map(card => <CamperCard key={card.id} card={card} />)
+        ) : interestingCards.length > 0 ? (
+          <NotfoundMessage>No results found</NotfoundMessage>
+        ) : (
+          <EmptyMessage>
+            This page is for chosen campers. Please go to the{' '}
+            <Highlight>Catalog Campers</Highlight> and choose the ones that
+            interest you.
+          </EmptyMessage>
+        )}
+      </CardsContainer>
       {visibleCount < filteredCards.length && (
-        <LoadMoreButton onClick={handleLoadMore}>
-          Load more
-        </LoadMoreButton>
+        <LoadMoreButton onClick={handleLoadMore}>Load more</LoadMoreButton>
       )}
     </Container>
   );

@@ -4,7 +4,7 @@ import {
   TopBar,
   ButtonContainer,
   ButtonLeft,
-  ButtonRight
+  ButtonRight,
 } from './HeaderFavorites.styled.jsx';
 
 const HeaderFavorites = () => {

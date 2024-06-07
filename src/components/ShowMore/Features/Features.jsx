@@ -1,13 +1,13 @@
 import React from 'react';
-import { 
-  InfoContainer, 
-  FeaturesContainer, 
-  ItemContainer, 
-  Feature, 
-  Item, 
-  ParamContainer, 
-  Title, 
-  Param 
+import {
+  InfoContainer,
+  FeaturesContainer,
+  ItemContainer,
+  Feature,
+  Item,
+  ParamContainer,
+  Title,
+  Param,
 } from './Features.styled.jsx';
 import Booking from '../Booking/Booking.jsx';
 import Users from '../../../assets/MYSVG/users.svg';
@@ -27,12 +27,11 @@ import Freezer from '../../../assets/MYSVG/Freezer.svg';
 import Microwave from '../../../assets/MYSVG/Microwave.svg';
 
 const Features = ({ card }) => {
-
-  const capitalizeString = (str) => {
+  const capitalizeString = str => {
     return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
   };
 
-  const addSpaceBetweenNumberAndUnit = (str) => {
+  const addSpaceBetweenNumberAndUnit = str => {
     return str.replace(/(\d+)([a-zA-Z]+)/, '$1 $2');
   };
 
@@ -48,7 +47,12 @@ const Features = ({ card }) => {
           </Feature>
           <Feature>
             <Item>
-              <img src={Transmission} alt="Transmission" width="20" height="20" />
+              <img
+                src={Transmission}
+                alt="Transmission"
+                width="20"
+                height="20"
+              />
               {card.transmission}
             </Item>
           </Feature>
@@ -161,19 +165,24 @@ const Features = ({ card }) => {
             <span>Form</span> <span>{capitalizeString(card.form)}</span>
           </Param>
           <Param>
-            <span>Length</span> <span>{addSpaceBetweenNumberAndUnit(card.length)}</span>
+            <span>Length</span>{' '}
+            <span>{addSpaceBetweenNumberAndUnit(card.length)}</span>
           </Param>
           <Param>
-            <span>Width</span> <span>{addSpaceBetweenNumberAndUnit(card.width)}</span>
+            <span>Width</span>{' '}
+            <span>{addSpaceBetweenNumberAndUnit(card.width)}</span>
           </Param>
           <Param>
-            <span>Height</span> <span>{addSpaceBetweenNumberAndUnit(card.height)}</span>
+            <span>Height</span>{' '}
+            <span>{addSpaceBetweenNumberAndUnit(card.height)}</span>
           </Param>
           <Param>
-            <span>Tank</span> <span>{addSpaceBetweenNumberAndUnit(card.tank)}</span>
+            <span>Tank</span>{' '}
+            <span>{addSpaceBetweenNumberAndUnit(card.tank)}</span>
           </Param>
           <Param>
-            <span>Consumption</span> <span>{addSpaceBetweenNumberAndUnit(card.consumption)}</span>
+            <span>Consumption</span>{' '}
+            <span>{addSpaceBetweenNumberAndUnit(card.consumption)}</span>
           </Param>
         </ParamContainer>
       </FeaturesContainer>

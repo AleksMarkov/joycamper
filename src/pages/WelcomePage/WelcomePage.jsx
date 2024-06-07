@@ -3,7 +3,7 @@ import {
   Home,
   ButtonContainer,
   ButtonLeft,
-  ButtonRight
+  ButtonRight,
 } from './WelcomePage.styled.jsx';
 import FooterPage from 'components/FooterPage/FooterPage';
 import HomePage from 'components/HomePage/HomePage';
@@ -27,4 +27,3 @@ const WelcomePage = () => {
 };
 
 export default WelcomePage;
-

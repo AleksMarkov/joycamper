@@ -10,7 +10,7 @@ export const Opacity = styled.div`
   width: 100%;
   height: 100%;
   background: rgba(17, 18, 19, 0.4);
-  z-index: 9999; 
+  z-index: 9999;
 `;
 
 export const Modalcont = styled.div`
@@ -24,7 +24,7 @@ export const Modalcont = styled.div`
   border-radius: 20px;
   color: var(--main);
   background-color: white;
-  z-index: 10000; 
+  z-index: 10000;
   width: ${({ $Width }) => $Width}px;
   max-width: 984px;
 `;

@@ -14,7 +14,7 @@ import {
   Image,
   Description,
   ButtomContainer,
-  TabButton
+  TabButton,
 } from './ShowMore.styled.jsx';
 import Features from './Features/Features.jsx';
 import Reviews from './Reviews/Reviews.jsx';
@@ -41,10 +41,18 @@ const ShowMore = ({ card, showModal }) => {
     };
   }, []);
 
-  const averageRating = card.reviews && card.reviews.length > 0
-    ? (card.reviews.reduce((acc, review) => acc + review.reviewer_rating, 0) / card.reviews.length).toFixed(1)
-    : 'No ratings';
-  const formattedPrice = `€${parseFloat(card.price).toFixed(2).replace('.', ',')}`;
+  const averageRating =
+    card.reviews && card.reviews.length > 0
+      ? (
+          card.reviews.reduce(
+            (acc, review) => acc + review.reviewer_rating,
+            0
+          ) / card.reviews.length
+        ).toFixed(1)
+      : 'No ratings';
+  const formattedPrice = `€${parseFloat(card.price)
+    .toFixed(2)
+    .replace('.', ',')}`;
 
   return (
     <Modal width={modalWidth} height={720} onClose={() => showModal(false)}>
@@ -55,7 +63,9 @@ const ShowMore = ({ card, showModal }) => {
               <Title>{card.name}</Title>
               <ReviewsContainer>
                 <img src={Star} alt="Star" width="16" height="16" />
-                <ReviewText>{averageRating} ({card.reviews.length} Reviews)</ReviewText>
+                <ReviewText>
+                  {averageRating} ({card.reviews.length} Reviews)
+                </ReviewText>
                 <img src={Map} alt="Map point" width="16" height="16" />
                 <Location>{card.location}</Location>
               </ReviewsContainer>
@@ -63,16 +73,26 @@ const ShowMore = ({ card, showModal }) => {
             </TitleContainer>
             <ImageContainer>
               {card.gallery.map((image, index) => (
-                <Image key={index} src={image} alt={`Picture of ${card.name}`} />
+                <Image
+                  key={index}
+                  src={image}
+                  alt={`Picture of ${card.name}`}
+                />
               ))}
             </ImageContainer>
             <Description>{card.description}</Description>
           </InfoContainer>
           <ButtomContainer>
-            <TabButton active={activeTab === 'Features'} onClick={() => setActiveTab('Features')}>
+            <TabButton
+              active={activeTab === 'Features'}
+              onClick={() => setActiveTab('Features')}
+            >
               Features
             </TabButton>
-            <TabButton active={activeTab === 'Reviews'} onClick={() => setActiveTab('Reviews')}>
+            <TabButton
+              active={activeTab === 'Reviews'}
+              onClick={() => setActiveTab('Reviews')}
+            >
               Reviews
             </TabButton>
           </ButtomContainer>

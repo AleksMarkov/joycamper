@@ -14,7 +14,7 @@ import {
   FilterButton,
   IconWrapper,
   ButtonText,
-  Button
+  Button,
 } from './MainCatalog.styled';
 import { ReactComponent as Ac } from '../../assets/MYSVG/AC.svg';
 import { ReactComponent as Transmission } from '../../assets/MYSVG/transmission.svg';
@@ -35,17 +35,17 @@ const MainCatalog = ({ onSearch }) => {
   const [location, setLocation] = useState('');
   const [selectedVehicle, setSelectedVehicle] = useState('');
 
-  const handleVehicleSelect = (vehicleType) => {
-    setSelectedVehicle((prevSelectedVehicle) =>
+  const handleVehicleSelect = vehicleType => {
+    setSelectedVehicle(prevSelectedVehicle =>
       prevSelectedVehicle === vehicleType ? '' : vehicleType
     );
   };
 
-  const handleEquipmentSelect = (setEquipmentType) => {
-    setEquipmentType((prevState) => !prevState);
+  const handleEquipmentSelect = setEquipmentType => {
+    setEquipmentType(prevState => !prevState);
   };
 
-  const handleLocationChange = (event) => {
+  const handleLocationChange = event => {
     setLocation(event.target.value);
   };
 

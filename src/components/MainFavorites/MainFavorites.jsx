@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { filterInterests } from '../../redux/cards/interestsSlice'; 
+import { filterInterests } from '../../redux/cards/interestsSlice';
 import {
   Container,
   LocationSection,
@@ -16,7 +16,7 @@ import {
   FilterButton,
   IconWrapper,
   ButtonText,
-  Button
+  Button,
 } from './MainFavorites.styled';
 import { ReactComponent as Ac } from '../../assets/MYSVG/AC.svg';
 import { ReactComponent as Transmission } from '../../assets/MYSVG/transmission.svg';
@@ -35,12 +35,12 @@ const MainFavorites = () => {
   const [kitchenSelected, setKitchenSelected] = useState(false);
   const [tvSelected, setTvSelected] = useState(false);
   const [showerSelected, setShowerSelected] = useState(false);
-  const [location, setLocation] = useState(''); 
+  const [location, setLocation] = useState('');
   const [vanSelected, setVanSelected] = useState(false);
   const [fullSelected, setFullSelected] = useState(false);
   const [alcoveSelected, setAlcoveSelected] = useState(false);
 
-  const handleVehicleSelect = (vehicleType) => {
+  const handleVehicleSelect = vehicleType => {
     if (vehicleType === 'panelTruck') {
       setVanSelected(!vanSelected);
       setFullSelected(false);
@@ -56,26 +56,28 @@ const MainFavorites = () => {
     }
   };
 
-  const handleEquipmentSelect = (setEquipmentType) => {
-    setEquipmentType((prevState) => !prevState);
+  const handleEquipmentSelect = setEquipmentType => {
+    setEquipmentType(prevState => !prevState);
   };
 
-  const handleLocationChange = (event) => {
-    setLocation(event.target.value); 
+  const handleLocationChange = event => {
+    setLocation(event.target.value);
   };
 
   const handleSearch = () => {
-    dispatch(filterInterests({
-      acSelected,
-      automaticSelected,
-      kitchenSelected,
-      tvSelected,
-      showerSelected,
-      vanSelected,
-      fullSelected,
-      alcoveSelected,
-      location,
-    }));
+    dispatch(
+      filterInterests({
+        acSelected,
+        automaticSelected,
+        kitchenSelected,
+        tvSelected,
+        showerSelected,
+        vanSelected,
+        fullSelected,
+        alcoveSelected,
+        location,
+      })
+    );
   };
 
   return (
@@ -87,8 +89,8 @@ const MainFavorites = () => {
             type="text"
             placeholder="Kyiv, Ukraine"
             icon={Map}
-            value={location} 
-            onChange={handleLocationChange} 
+            value={location}
+            onChange={handleLocationChange}
           />
         </InputForm>
       </LocationSection>

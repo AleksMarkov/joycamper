@@ -17,9 +17,9 @@ import {
   FeaturesContainer,
   Feature,
   Item,
-  ShowMoreButton
+  ShowMoreButton,
 } from './CamperCard.styled.jsx';
-import ShowMore from '../ShowMore/ShowMore'; 
+import ShowMore from '../ShowMore/ShowMore';
 import Star from '../../assets/MYSVG/star.svg';
 import Map from '../../assets/MYSVG/Map.svg';
 import Users from '../../assets/MYSVG/users.svg';
@@ -35,10 +35,14 @@ import HartOn from '../../assets/MYSVG/hartOn.svg';
 
 const CamperCard = ({ card }) => {
   const dispatch = useDispatch();
-  const interestingCards = useSelector(state => state.interests.interestingCards);
-  const [showModal, setShowModal] = useState(false); 
+  const interestingCards = useSelector(
+    state => state.interests.interestingCards
+  );
+  const [showModal, setShowModal] = useState(false);
 
-  const isInteresting = interestingCards.some(interestingCard => interestingCard.id === card.id);
+  const isInteresting = interestingCards.some(
+    interestingCard => interestingCard.id === card.id
+  );
 
   const handleInterestClick = () => {
     if (isInteresting) {
@@ -49,8 +53,12 @@ const CamperCard = ({ card }) => {
   };
 
   const ratings = card.reviews.map(review => review.reviewer_rating);
-  const averageRating = (ratings.reduce((a, b) => a + b, 0) / ratings.length).toFixed(1);
-  const formattedPrice = `€${parseFloat(card.price).toFixed(2).replace('.', ',')}`;
+  const averageRating = (
+    ratings.reduce((a, b) => a + b, 0) / ratings.length
+  ).toFixed(1);
+  const formattedPrice = `€${parseFloat(card.price)
+    .toFixed(2)
+    .replace('.', ',')}`;
 
   return (
     <>
@@ -63,12 +71,19 @@ const CamperCard = ({ card }) => {
             <Title>{card.name}</Title>
             <Price>{formattedPrice}</Price>
             <IconWrapper onClick={handleInterestClick}>
-              <img src={isInteresting ? HartOn : HartOff} width="24" height="24" alt="Hart Icon" />
+              <img
+                src={isInteresting ? HartOn : HartOff}
+                width="24"
+                height="24"
+                alt="Hart Icon"
+              />
             </IconWrapper>
           </TitleContainer>
           <ReviewsContainer>
             <img src={Star} alt="Star" width="16" height="16" />
-            <ReviewText>{averageRating} ({ratings.length} Reviews)</ReviewText>
+            <ReviewText>
+              {averageRating} ({ratings.length} Reviews)
+            </ReviewText>
             <img src={Map} alt="Map_point" width="16" height="16" />
             <Location>{card.location}</Location>
           </ReviewsContainer>
@@ -82,7 +97,12 @@ const CamperCard = ({ card }) => {
             </Feature>
             <Feature>
               <Item>
-                <img src={Transmission} alt="Transmission" width="20" height="20" />
+                <img
+                  src={Transmission}
+                  alt="Transmission"
+                  width="20"
+                  height="20"
+                />
                 {card.transmission}
               </Item>
             </Feature>
@@ -133,7 +153,9 @@ const CamperCard = ({ card }) => {
               </Feature>
             )}
           </FeaturesContainer>
-          <ShowMoreButton onClick={() => setShowModal(true)}>Show more</ShowMoreButton>
+          <ShowMoreButton onClick={() => setShowModal(true)}>
+            Show more
+          </ShowMoreButton>
         </InfoContainer>
       </Card>
       {showModal && <ShowMore card={card} showModal={setShowModal} />}
@@ -142,4 +164,3 @@ const CamperCard = ({ card }) => {
 };
 
 export default CamperCard;
-

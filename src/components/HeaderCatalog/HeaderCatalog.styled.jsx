@@ -24,7 +24,7 @@ export const ButtonContainer = styled.div`
   }
 `;
 
-export const ButtonLeft = styled.button`      
+export const ButtonLeft = styled.button`
   border-left: 4px solid white;
   border-right: 4px solid white;
   border-top: none;
@@ -48,7 +48,7 @@ export const ButtonLeft = styled.button`
   }
 `;
 
-export const ButtonRight = styled.button`      
+export const ButtonRight = styled.button`
   border-left: none;
   border-right: 4px solid white;
   border-top: none;

@@ -9,9 +9,9 @@ const advertsSlice = createSlice({
     error: null,
   },
   reducers: {},
-  extraReducers: (builder) => {
+  extraReducers: builder => {
     builder
-      .addCase(fetchAllAdverts.pending, (state) => {
+      .addCase(fetchAllAdverts.pending, state => {
         state.loading = true;
         state.error = null;
       })
@@ -27,5 +27,3 @@ const advertsSlice = createSlice({
 });
 
 export default advertsSlice.reducer;
-
-
