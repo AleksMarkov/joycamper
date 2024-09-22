@@ -11,7 +11,7 @@ import GlobalStyles from 'GlobalStyles';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter basename="/joycamper">
+      <BrowserRouter basename="/">
         <GlobalStyles />
         <App />
       </BrowserRouter>
