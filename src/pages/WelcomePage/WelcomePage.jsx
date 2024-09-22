@@ -1,3 +1,4 @@
+//WelcomePage.jsx
 import React from 'react';
 import {
   Home,

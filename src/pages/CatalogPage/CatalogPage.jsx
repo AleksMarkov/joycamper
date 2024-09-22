@@ -1,3 +1,4 @@
+//CatalogPage.jsx
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchAllAdverts } from '../../redux/adverts/advertsOperation';

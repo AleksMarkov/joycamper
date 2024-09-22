@@ -1,3 +1,4 @@
+//advertsOperation.js
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { getAllCampers } from '../../api/adverts'; // Измените на getAllCampers
 

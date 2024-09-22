@@ -1,3 +1,4 @@
+//CamperCard.jsx
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addInterest, removeInterest } from '../../redux/cards/interestsSlice';

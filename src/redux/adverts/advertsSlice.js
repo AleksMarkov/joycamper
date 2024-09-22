@@ -1,3 +1,4 @@
+//advertsSlice.js
 import { createSlice } from '@reduxjs/toolkit';
 import { fetchAllAdverts } from './advertsOperation';
 
