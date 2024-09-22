@@ -2,7 +2,7 @@
   "name": "joycamper",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://goitacademy.github.io/joycamper/",
+  "homepage": "/",
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.5",
     "@testing-library/jest-dom": "^5.16.3",
