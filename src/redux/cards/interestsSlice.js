@@ -30,12 +30,12 @@ const interestsSlice = createSlice({
       state.loading = true;
       state.filteredCards = state.interestingCards.filter(card => {
         return (
-          (!action.payload.acSelected || card.details.airConditioner === 1) &&
+          (!action.payload.acSelected || card.AC) &&
           (!action.payload.automaticSelected ||
             card.transmission.toLowerCase() === 'automatic') &&
-          (!action.payload.kitchenSelected || card.details.kitchen === 1) &&
-          (!action.payload.tvSelected || card.details.TV === 1) &&
-          (!action.payload.showerSelected || card.details.shower === 1) &&
+          (!action.payload.kitchenSelected || card.kitchen) &&
+          (!action.payload.tvSelected || card.TV) &&
+          (!action.payload.showerSelected || card.bathroom) &&
           (!action.payload.vanSelected || card.form === 'panelTruck') &&
           (!action.payload.fullSelected || card.form === 'fullyIntegrated') &&
           (!action.payload.alcoveSelected || card.form === 'alcove') &&

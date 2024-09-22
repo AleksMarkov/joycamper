@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-const advertsInstance = axios.create({
-  baseURL: 'https://665b72a0003609eda460e874.mockapi.io/api',
+const apiInstance = axios.create({
+  baseURL: 'http://localhost:5000/api',
 });
 
-export const getAllAdverts = async () => {
-  const { data } = await advertsInstance.get('/adverts');
+export const getAllCampers = async () => {
+  const { data } = await apiInstance.get('/campers');
   return data;
 };

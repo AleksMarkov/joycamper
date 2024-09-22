@@ -25,12 +25,12 @@ const CatalogPage = () => {
   const handleSearch = filters => {
     const filtered = cards.filter(card => {
       return (
-        (!filters.acSelected || card.details.airConditioner === 1) &&
+        (!filters.acSelected || card.AC) &&
         (!filters.automaticSelected ||
           card.transmission.toLowerCase() === 'automatic') &&
-        (!filters.kitchenSelected || card.details.kitchen === 1) &&
-        (!filters.tvSelected || card.details.TV === 1) &&
-        (!filters.showerSelected || card.details.shower === 1) &&
+        (!filters.kitchenSelected || card.kitchen) &&
+        (!filters.tvSelected || card.TV) &&
+        (!filters.showerSelected || card.bathroom) &&
         (!filters.location ||
           card.location
             .toLowerCase()

@@ -22,11 +22,9 @@ import {
 import ShowMore from '../ShowMore/ShowMore';
 import Star from '../../assets/MYSVG/star.svg';
 import Map from '../../assets/MYSVG/Map.svg';
-import Users from '../../assets/MYSVG/users.svg';
 import Transmission from '../../assets/MYSVG/transmission.svg';
 import Engine from '../../assets/MYSVG/engine.svg';
 import Kitchen from '../../assets/MYSVG/kitchen.svg';
-import Beds from '../../assets/MYSVG/beds.svg';
 import AC from '../../assets/MYSVG/AC.svg';
 import TV from '../../assets/MYSVG/TV.svg';
 import WC from '../../assets/MYSVG/shower.svg';
@@ -64,7 +62,7 @@ const CamperCard = ({ card }) => {
     <>
       <Card>
         <ImageContainer>
-          <Image src={card.gallery[0]} alt="Picture_of_camper" />
+          <Image src={card.gallery[0].thumb} alt="Picture_of_camper" />
         </ImageContainer>
         <InfoContainer>
           <TitleContainer>
@@ -91,12 +89,6 @@ const CamperCard = ({ card }) => {
           <FeaturesContainer>
             <Feature>
               <Item>
-                <img src={Users} alt="Adults" width="20" height="20" />
-                {card.adults} adults
-              </Item>
-            </Feature>
-            <Feature>
-              <Item>
                 <img
                   src={Transmission}
                   alt="Transmission"
@@ -112,7 +104,7 @@ const CamperCard = ({ card }) => {
                 {card.engine}
               </Item>
             </Feature>
-            {card.details.kitchen === 1 && (
+            {card.kitchen && (
               <Feature>
                 <Item>
                   <img src={Kitchen} alt="Kitchen" width="20" height="20" />
@@ -120,31 +112,23 @@ const CamperCard = ({ card }) => {
                 </Item>
               </Feature>
             )}
-            {card.details.beds > 0 && (
-              <Feature>
-                <Item>
-                  <img src={Beds} alt="Beds" width="20" height="20" />
-                  {card.details.beds} Beds
-                </Item>
-              </Feature>
-            )}
-            {card.details.TV > 0 && (
+            {card.TV && (
               <Feature>
                 <Item>
                   <img src={TV} alt="TV" width="20" height="20" />
-                  {card.details.TV} TV
+                  {card.TV} TV
                 </Item>
               </Feature>
             )}
-            {card.details.bathroom > 0 && (
+            {card.bathroom && (
               <Feature>
                 <Item>
                   <img src={WC} alt="WC" width="20" height="20" />
-                  {card.details.bathroom} WC
+                  {card.bathroom} WC
                 </Item>
               </Feature>
             )}
-            {card.details.airConditioner === 1 && (
+            {card.AC && (
               <Feature>
                 <Item>
                   <img src={AC} alt="AC" width="20" height="20" />

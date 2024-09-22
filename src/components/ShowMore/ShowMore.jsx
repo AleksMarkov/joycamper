@@ -75,7 +75,7 @@ const ShowMore = ({ card, showModal }) => {
               {card.gallery.map((image, index) => (
                 <Image
                   key={index}
-                  src={image}
+                  src={image.thumb}
                   alt={`Picture of ${card.name}`}
                 />
               ))}
